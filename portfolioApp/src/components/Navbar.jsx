@@ -29,7 +29,7 @@ export default function NavBar() {
             </Box>
 
         {/*Middle Section*/}
-            <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>            
+            <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-center' }}>            
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     <div className='NameLogo'>
                         Joshua Duplaa
@@ -39,7 +39,7 @@ export default function NavBar() {
 
         {/*Right Section*/}
           <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
-            <Button color="inherit">Login</Button>
+            <Button color="inherit">Contact</Button>
           </Box>
         </Toolbar>
       </AppBar>

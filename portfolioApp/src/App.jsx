@@ -25,6 +25,8 @@ function App() {
           Dive into to my projects and solutions as I work at the intersection of data science and software engineering.
         </p>
       </div>
+      <div>WEBSITE UNDER CONSTRUCTION!</div>
+      <div>View Pinned Projects on github: https://github.com/joshduplaa</div>
       <SlidingGallery></SlidingGallery>
     </>
   )
