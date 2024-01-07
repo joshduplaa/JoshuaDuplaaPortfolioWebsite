@@ -1,0 +1,31 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.card {
+  padding: 2em;
+}
+
+
+
+.nav-bar {
+  display: flex;        /* Enables flexbox layout */
+  width: 100%;          /* Navbar takes up full width */
+  position: fixed;      /* Navbar stays at the top */
+  top: 0;               /* Aligns navbar at the top */
+  left: 0;              /* Aligns navbar to the left */
+  z-index: 1000;        /* Ensures navbar stays on top of other content */
+  color: inherit;
+}
+
+.title {
+  place-items: top;
+  margin-top: 70px; /* Adjust this value to match the height of your navbar */
+  padding: 20px; /* Additional padding for aesthetic spacing */
+  /* Additional styling as needed */
+
+}
