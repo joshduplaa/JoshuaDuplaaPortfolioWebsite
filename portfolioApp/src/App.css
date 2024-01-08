@@ -8,15 +8,16 @@
   align-items: center;
 }
 
-body, html {
+body{
+  height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
 }
 
-/* Optional: Ensure that elements do not exceed the body's width */
-* {
-  box-sizing: border-box;
+#nav-bar {
+  width: 100%;
 }
+
 
 #title, #description, #gallery {
   width: 100%;
