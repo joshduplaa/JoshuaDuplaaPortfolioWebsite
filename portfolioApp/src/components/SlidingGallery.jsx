@@ -19,12 +19,11 @@ export default function SlidingGallery() {
 
             const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
             const trackWidth = window.innerWidth + 200; // Calculate the track width
-            console.log('hello');
-            console.log(trackWidth);
             const maxDelta = trackWidth / 2; // Adjust maxDelta based on track width
 
             const percentage = (mouseDelta / maxDelta) * -100;
             const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
+            
             // Constrain nextPercentage within the bounds of trackWidth
             const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -trackWidth * 100 / window.innerWidth);
             
