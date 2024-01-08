@@ -1,19 +1,47 @@
+/* slidingGallery.css */
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  left: 50%;
+  position: relative;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
 
+.image-container {
+  width: 30vmin;
+  height: 40vmin;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-label {
+  position: relative;
+  bottom: -10px;
+  left: 10%;
+  transform: translateX(-50%);
+  /* Add styles for button appearance */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
   #image-track {
-    display: flex;
-    gap: 4vmin;
-    position: absolute;
-    left: 50%;
-    top: 60%;
-    transform: translate(0%, -50%); 
-    user-select: none; /* -- Prevent image highlighting -- */
+    top: 50%; /* Adjust vertical position */
+    transform: translate(-50%, -50%);
   }
-  
-  #image-track > .image {
-    width: 30vmin;
-    height: 40vmin;
-    object-fit: cover;
-    object-position: 100% center;
+
+  .image-container {
+    width: 50vmin; /* Larger relative width on smaller screens */
+    height: auto; /* Adjust height to maintain aspect ratio */
   }
-  
-  
+
+  .image-label {
+    font-size: 0.9em; /* Smaller font size for labels */
+  }
+}

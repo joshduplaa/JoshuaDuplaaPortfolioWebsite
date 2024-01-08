@@ -60,15 +60,39 @@ export default function SlidingGallery() {
     <>
     <div className = 'galleryBody'>
         <div ref={trackRef} id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-            <img class="image" src="https://i.imgur.com/bRzg0cD.jpg" draggable="false" />
-            <img class="image" src="https://i.imgur.com/BivwvkL.jpg" draggable="false" />
-            <img class="image" src="https://i.imgur.com/kyQobki.jpg" draggable="false" />
-            <img class="image" src="https://i.imgur.com/5dPXoTY.jpg" draggable="false" />
-            <img class="image" src="https://i.imgur.com/itWmXTO.jpg" draggable="false" />
-            <img class="image" src="https://i.imgur.com/pkwrT45.png" draggable="false" />
-            <img class="image" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" />
-            <img class="image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
- 
+            <div className="image-container">
+                <img class="image" src="https://i.imgur.com/bRzg0cD.jpg" draggable="false" />
+                <button className="image-label">Label 1</button>
+            </div>
+            <div className="image-container">
+                <img class="image" src="https://i.imgur.com/BivwvkL.jpg" draggable="false" />
+                <button className="image-label">Label 1</button>
+            </div>
+            <div className="image-container">
+                <img class="image" src="https://i.imgur.com/kyQobki.jpg" draggable="false" />
+                <button className="image-label">Label 1</button>
+            </div>
+            <div className="image-container">
+                <img class="image" src="https://i.imgur.com/5dPXoTY.jpg" draggable="false" />
+                <button className="image-label">Label 1</button>
+            </div>
+            <div className="image-container">
+                <img class="image" src="https://i.imgur.com/itWmXTO.jpg" draggable="false" />
+                <button className="image-label">Label 1</button>
+            </div>
+            <div className="image-container">
+                <img class="image" src="https://i.imgur.com/pkwrT45.png" draggable="false" />
+                <button className="image-label">Label 1</button>
+            </div>
+            <div className="image-container">
+                <img class="image" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" />
+                <button className="image-label">Label 1</button>
+            </div>
+            <div className="image-container">
+                <img class="image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                <button className="image-label">Label 1</button>
+            </div>
+        
         </div>
     </div>
     </>
