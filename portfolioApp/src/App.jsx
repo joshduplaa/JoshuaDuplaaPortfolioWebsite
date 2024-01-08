@@ -18,7 +18,7 @@ function App() {
 
       <div id='description'>
         <p>Welcome to the nexus where engineering ingenuity meets analytical prowess. 
-          I'm Joshua Duplaa, a Texas Tech student in my last year of a dual degree in Computer Science and Mathematics. 
+          I'm Joshua Duplaa, a Texas Tech University student in my last year of a dual degree in Computer Science and Mathematics. 
           I specialize in transforming data into actionable insights and streamlining DevOps with a touch of cybersecurity flair. 
           Dive into to my projects and solutions as I work at the intersection of data science and software engineering.
         </p>

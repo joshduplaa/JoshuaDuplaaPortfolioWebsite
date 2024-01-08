@@ -11,7 +11,7 @@ import './componentStyles/navBar.css'
 export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>  
-      <AppBar className='Appbar' position="static" sx={{ backgroundColor: "transparent", boxShadow: 'none' }}>
+      <AppBar className='Appbar' position="relative" sx={{ backgroundColor: "transparent", boxShadow: 'none', width: '100%'}}>
 
 
         <Toolbar>
