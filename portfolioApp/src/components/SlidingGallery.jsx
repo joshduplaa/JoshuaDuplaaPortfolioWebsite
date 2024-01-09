@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import './componentStyles/slidingGallery.css'
 
 export default function SlidingGallery() {
+    //TODO: add sidescrolling with a trackpad.
+
+    
     const trackRef = useRef(null);
 
     useEffect(() => {
@@ -28,8 +31,11 @@ export default function SlidingGallery() {
             
             track.dataset.percentage = nextPercentage;
 
-            if(track.dataset.mouseDownAt === "0") return;
 
+            //Unsticks the mouse
+            if(track.dataset.mouseDownAt === "0") return;
+            
+            //duration makes the track flow after releasing the mouse
             track.animate({
                 transform: `translate(${nextPercentage}%, 0%)`
             }, { duration: 1200, fill: "forwards" });
@@ -64,6 +70,11 @@ export default function SlidingGallery() {
     <>
     <div className = 'galleryBody'>
         <div ref={trackRef} id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+            
+            <div className="image-container">
+                <img className="image" src="https://i.imgur.com/itWmXTO.jpg" draggable="false" />
+                <button className="image-label">Label 1</button>
+            </div>
             <div className="image-container">
                 <img className="image" src="https://i.imgur.com/bRzg0cD.jpg" draggable="false" />
                 <button className="image-label">Label 1</button>
@@ -78,10 +89,6 @@ export default function SlidingGallery() {
             </div>
             <div className="image-container">
                 <img className="image" src="https://i.imgur.com/5dPXoTY.jpg" draggable="false" />
-                <button className="image-label">Label 1</button>
-            </div>
-            <div className="image-container">
-                <img className="image" src="https://i.imgur.com/itWmXTO.jpg" draggable="false" />
                 <button className="image-label">Label 1</button>
             </div>
             <div className="image-container">

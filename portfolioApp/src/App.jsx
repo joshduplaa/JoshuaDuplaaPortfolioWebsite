@@ -35,7 +35,10 @@ function App() {
       
       </div>
       <p className='Projects'>Projects</p>
+      <p className='Projects'>Click and Drag to browse</p>
+      <div className='galleryDiv'>
       <SlidingGallery></SlidingGallery>
+      </div>
     </>
   )
 }
