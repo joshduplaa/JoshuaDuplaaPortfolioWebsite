@@ -11,11 +11,10 @@ export default function SlidingGallery() {
 
         const handleOnUp = () => {
             track.dataset.mouseDownAt = "0";  
-            track.dataset.prevPercentage = "0";
+            track.dataset.prevPercentage = track.dataset.percentage;
         };
 
         const handleOnMove = (e) => {
-            if(track.dataset.mouseDownAt === "0") return;
 
             const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
             const trackWidth = window.innerWidth; // Calculate the track width
@@ -28,6 +27,8 @@ export default function SlidingGallery() {
             const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -trackWidth * 100 / window.innerWidth);
             
             track.dataset.percentage = nextPercentage;
+
+            if(track.dataset.mouseDownAt === "0") return;
 
             track.animate({
                 transform: `translate(${nextPercentage}%, 0%)`

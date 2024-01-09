@@ -24,20 +24,9 @@
   object-fit: cover;
 }
 
-.image-label {
-  position: relative;
-  bottom: -10px;
-  left: 10%;
-  transform: translateX(-50%);
-  /* Add styles for button appearance */
-}
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-  #image-track {
-    top: 50%; /* Adjust vertical position */
-    transform: translate(-50%, 0%);
-  }
 
   .image-container {
     width: 50vmin; /* Larger relative width on smaller screens */
