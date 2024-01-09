@@ -24,7 +24,15 @@ function App() {
         </p>
       </div>
       <div >WEBSITE UNDER CONSTRUCTION!</div>
-      <div>cView Pinned Projects on github: https://github.com/joshduplaa</div>
+      <div>View Pinned Projects on github: 
+        <a href = "https://github.com/joshduplaa" target="_blank">https://github.com/joshduplaa</a>
+      </div>
+      <div>
+      <a href="../src/assets/Joshua_Duplaa_Resume_2024.pdf" download="Joshua_Duplaa_Resume.pdf">
+        <button>Download My Resume</button>
+      </a>
+
+      </div>
       <div id='gallery'>
         <SlidingGallery></SlidingGallery>
       </div>
