@@ -3,10 +3,13 @@
   display: flex;
   gap: 4vmin;
   left: 50%;
-  position: absolute;
+  position: relative;
   top: 60%;
-  transform: translate(-50%, -50%);
   user-select: none;
+}
+
+#galleryBody{
+  margin-bottom: 10px;
 }
 
 .image-container {
@@ -33,7 +36,7 @@
 @media (max-width: 768px) {
   #image-track {
     top: 50%; /* Adjust vertical position */
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
   }
 
   .image-container {

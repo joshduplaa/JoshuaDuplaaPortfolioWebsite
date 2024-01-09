@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import './componentStyles/navBar.css'
 
 export default function NavBar() {
@@ -16,7 +17,6 @@ export default function NavBar() {
 
         <Toolbar>
         {/*Left Section*/}
-          <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-start' }}>
             <IconButton
                 size="large"
                 edge="start"
@@ -26,21 +26,17 @@ export default function NavBar() {
             >
                 <MenuIcon />
             </IconButton>
-            </Box>
 
         {/*Middle Section*/}
-            <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-center' }}>            
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     <div className='NameLogo'>
                         Joshua Duplaa
                     </div>
                 </Typography>
-            </Box>  
-
+              
         {/*Right Section*/}
-          <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
+            <GitHubIcon></GitHubIcon>
             <Button color="inherit">Contact</Button>
-          </Box>
         </Toolbar>
       </AppBar>
     </Box>
