@@ -73,36 +73,55 @@ export default function SlidingGallery() {
             
             <div className="image-container">
                 <img className="image" src="https://i.imgur.com/itWmXTO.jpg" draggable="false" />
-                <button className="image-label">Label 1</button>
+                <a href = "https://github.com/joshduplaa/SWE_Lottery_Project" target="_blank">
+                <button className="image-label">Mock Texas Lottery Web App</button>
+                </a>
             </div>
             <div className="image-container">
                 <img className="image" src="https://i.imgur.com/bRzg0cD.jpg" draggable="false" />
-                <button className="image-label">Label 1</button>
+                <a href = "https://github.com/joshduplaa/BioInformaticsDrugDiscovery" target="_blank">
+                <button className="image-label">BioInformatics Drug Discovery Web App</button>
+                </a>
             </div>
             <div className="image-container">
                 <img className="image" src="https://i.imgur.com/BivwvkL.jpg" draggable="false" />
-                <button className="image-label">Label 1</button>
+                <a href = "https://github.com/joshduplaa/IoT-Water-Quality-App" target="_blank">
+                <button className="image-label">IOT local water quality Indicator</button>
+                </a>
             </div>
             <div className="image-container">
                 <img className="image" src="https://i.imgur.com/kyQobki.jpg" draggable="false" />
-                <button className="image-label">Label 1</button>
+                <a href = "https://github.com/joshduplaa" target="_blank">
+                <button className="image-label">Staring Contest Video Chat</button>
+                </a>
             </div>
             <div className="image-container">
                 <img className="image" src="https://i.imgur.com/5dPXoTY.jpg" draggable="false" />
-                <button className="image-label">Label 1</button>
+                <a href = "https://github.com/joshduplaa" target="_blank">
+                <button className="image-label">AVR Arduino Asteroids game</button>
+                </a>
             </div>
             <div className="image-container">
                 <img className="image" src="https://i.imgur.com/pkwrT45.png" draggable="false" />
-                <button className="image-label">Label 1</button>
+                <a href = "https://github.com/joshduplaa" target="_blank">
+                <button className="image-label">LeetCode</button>
+                </a>
+            </div>
+
+            <div className="image-container">
+                <img className="image" src="https://i.imgur.com/pkwrT45.png" draggable="false" />
+                <a href = "https://github.com/joshduplaa" target="_blank">
+                <button className="image-label">LeetCode</button>
+                </a>
             </div>
             <div className="image-container">
-                <img className="image" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" />
-                <button className="image-label">Label 1</button>
+                <img className="image" src="https://i.imgur.com/pkwrT45.png" draggable="false" />
+                <a href = "https://github.com/joshduplaa" target="_blank">
+                <button className="image-label">LeetCode</button>
+                </a>
             </div>
-            <div className="image-container">
-                <img className="image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
-                <button className="image-label">Label 1</button>
-            </div>
+            
+
         
         </div>
     </div>

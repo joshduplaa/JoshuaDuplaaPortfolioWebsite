@@ -12,6 +12,7 @@
 }
 
 
+
 body{
   height: 100%;
   max-width: 100%;
@@ -22,18 +23,50 @@ body{
   width: 100%;
 }
 
-
-#title, #description, #gallery {
+#title, #gallery {
   width: 100%;
 }
 
+#Introduction {
+  display: flex;
+  align-items: center; /* Vertically center the contents */
+  justify-content: space-between; /* Space out the child elements */
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+
+#photo {
+  flex-basis: 25%; /* Allocate 25% of the space to the avatar */
+  display: flex;
+  justify-content: center; /* Center the avatar horizontally */
+  align-items: center; /* Center the avatar vertically */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
 #description {
-  font-size: 1rem;
+  flex-basis: 70%; /* Allocate 75% of the space to the description */
+  display: flex;
+  justify-content: center; /* Center the description horizontally */
+  align-items: center; /* Center the description vertically */
   padding: 1rem;
+  text-align: left; /* Align the text to the left within the description div */
+  padding-right: 20%;
 }
 
 .galleryDiv{
 
   padding-bottom:100px
 
+}
+
+
+a:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
 }
