@@ -1,0 +1,41 @@
+
+
+#image-track {
+  gap: 4vmin;
+  background-color: transparent;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translate(0%, 0%); 
+  user-select: none; /* -- Prevent image highlighting -- */
+  overflow-x: hidden;
+  /* Add any additional styles for the track */
+}
+
+.image-container {
+  position: relative;
+  margin-right: 10px; /* Space between images */
+  /* Adjust the size as needed */
+}
+
+.image {
+  width: 30vmin;
+  height: 40vmin;
+  object-fit: cover;
+  object-position: 100% center;
+  /* Add any additional styles for the image */
+}
+
+figcaption {
+  position: absolute;
+  bottom: 10px; /* Distance from the bottom of the image */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white; /* Caption text color */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 5px 10px; /* Padding around text */
+  border-radius: 5px; /* Rounded corners for the caption box */
+  font-size: 1em;
+  text-align: center;
+  /* Add any additional styles for the caption */
+}

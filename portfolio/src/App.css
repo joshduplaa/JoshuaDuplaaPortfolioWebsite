@@ -1,0 +1,61 @@
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: .5rem;
+  text-align: center;
+
+}
+
+html, body {
+  width: 100%;
+  height: 120%;
+  overflow-x: hidden; /* Prevents horizontal overflow */
+  max-width: 99vw; /* Prevents the viewport from extending beyond the visible area */
+  position: relative; /* Resets any potential positioning from other styles */
+}
+
+.intro{
+  display: flex;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.profileContainer{
+  padding-right: 10%;
+  padding-left: 5%;
+}
+
+.profilePic{
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border: 5px solid #289726;
+  background-color: #dfdfdf;
+  border-radius: 50%;
+  
+}
+.profilePic img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.proTitle{
+  font-size: 90%
+
+}
+
+#personalStatement{
+  padding-right: 5%;
+}
+
+
+
+#image-track{
+
+  margin-bottom: 15%;
+  overflow: hidden;
+
+}
+
