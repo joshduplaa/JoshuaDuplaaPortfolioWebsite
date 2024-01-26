@@ -8,10 +8,10 @@ export default function Introduction(){
     <>
       <h2>Hi, I'm Joshua Duplaa</h2>
       <p>Welcome to the nexus where engineering ingenuity meets analytical prowess. I'm a student at Texas Tech University in my final year of a double degree in Computer Science and Mathematics. 
-            I specialize in building React applications, transforming data into actionable insights and streamlining DevOps with a touch of cybersecurity flair. 
+            I build React applications, transform data into actionable insights and configure CI/CD Pipelines for automation and DevOps with a touch of cybersecurity flair. 
             Dive into to my projects and solutions as I work at the intersection of data science and software engineering.
             <br/>
-            *Website Under Construction*
+            <b>*Website Under Construction*</b>
       </p>
     </>
   );

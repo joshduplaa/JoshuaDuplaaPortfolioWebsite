@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import './componentStyles/slidingGallery.css'
+import './componentStyles/slidingGallery.css';
+import { Link } from 'react-router-dom'; // Import Link
 
 export default function SlidingGallery() {
     //TODO: add sidescrolling with a trackpad.
@@ -70,35 +71,51 @@ export default function SlidingGallery() {
                 <div ref={trackRef} id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
                     <figure className="image-container">
                         <img className="image lottery" src="https://i.imgur.com/itWmXTO.jpg" draggable="false" />
-                        <figcaption>Lottery</figcaption>
+                        <Link to="/lps" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <figcaption>Lottery Purchase System</figcaption>
+                        </Link>
                     </figure>
                     <figure className="image-container">
                         <img className="image assembly" src="https://i.imgur.com/5dPXoTY.jpg" draggable="false" />
-                        <figcaption>AVR Assembly Asteroids Game</figcaption>
+                        <Link to="/avr" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <figcaption>Microcontroller Asteroids Game</figcaption>
+                        </Link>
                     </figure>
                     <figure className="image-container">
                         <img className="image bioinformatics" src="https://i.imgur.com/bRzg0cD.jpg" draggable="false" />
-                        <figcaption>Bioinformatics Drug Discovery App</figcaption>
+                        <Link to="/drugdiscovery" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <figcaption>Drug Discovery App</figcaption>
+                        </Link>
                     </figure>
                     <figure className="image-container">
                         <img className="image waterTest" src="https://i.imgur.com/BivwvkL.jpg" draggable="false" />
-                        <figcaption>Water Test</figcaption>
+                        <Link to="/iotwater" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <figcaption>IoT Water Monitor</figcaption>
+                        </Link>
                     </figure>
                     <figure className="image-container">
                         <img className="image videochat" src="https://i.imgur.com/kyQobki.jpg" draggable="false" />
-                        <figcaption>Video Chat</figcaption>
+                        <Link to="/staringcontest" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <figcaption>Staring Contest Video Chat</figcaption>
+                        </Link>
                     </figure>
                     <figure className="image-container">
                         <img className="image chatBot" src="https://i.imgur.com/kyQobki.jpg" draggable="false" />
-                        <figcaption>Chat Bot</figcaption>
+                        <Link to="/chatbot" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <figcaption>Clothing Chat Bot</figcaption>
+                        </Link>
                     </figure>
                     <figure className="image-container">
                         <img className="image tradingBot" src="https://i.imgur.com/pkwrT45.png" draggable="false" />
-                        <figcaption>Trading Bot</figcaption>
+                        <Link to="/prison" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <figcaption>Prison Analyitical Dashboard</figcaption>
+                        </Link>
                     </figure>
                     <figure className="image-container">
                         <img className="image leetcode" src="https://i.imgur.com/pkwrT45.png" draggable="false" />
+                        <Link to="/leetcode" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <figcaption>LeetCode</figcaption>
+                        </Link>
                     </figure>
                 </div>
             </>

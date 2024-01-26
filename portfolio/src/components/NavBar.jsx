@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material';
 import Button from '@mui/material/Button';
 import DrawerToggle from './DrawerToggle.jsx';
+import { Link } from 'react-router-dom'; // Import Link
 import './componentStyles/navbar.css';
 
 const logoTheme = createTheme({
@@ -13,39 +14,39 @@ const logoTheme = createTheme({
       'Lemon',
       'serif',
     ].join(','),
-    
-  },});
-
+  },
+});
 
 export default function ButtonAppBar() {
-
-  
   return (
-    
-    
-      <AppBar className='Appbar' position="relative" sx={{ backgroundColor: "transparent", boxShadow: 'none', width: '100%' }}  >
-        <Toolbar>
+    <AppBar className='Appbar' position="relative" sx={{ backgroundColor: "transparent", boxShadow: 'none', width: '100%' }}>
+      <Toolbar>
         <ThemeProvider theme={logoTheme}>
-          <Typography variant="h2" component="div" sx={{ }}>
+        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Typography variant="h2" component="div">
             JD    
           </Typography>
+        </Link>
         </ThemeProvider>
 
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} />
 
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            
-          </Typography>
-
-          <div className='navTabs'>
+        <div className='navTabs'>
+          <Link to="/projects" style={{ textDecoration: 'none', color: 'inherit' }}>
             <Button color="inherit">Projects</Button>
+          </Link>
+          <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>
             <Button color="inherit">About Me</Button>
+          </Link>
+          <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
             <Button color="inherit">Contact</Button>
-          </div>
-          <div id='toggle'>
-            <DrawerToggle></DrawerToggle>
-          </div>
-        </Toolbar>
-      </AppBar>
+          </Link>
+        </div>
 
+        <div id='toggle'>
+          <DrawerToggle />
+        </div>
+      </Toolbar>
+    </AppBar>
   );
 }

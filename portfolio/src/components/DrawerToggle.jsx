@@ -61,7 +61,7 @@ export default function DrawerToggle() {
     <div>
       {['top'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}><MenuIcon></MenuIcon></Button>
+          <Button onClick={toggleDrawer(anchor, true)}><MenuIcon sx={{color: 'white'}}></MenuIcon></Button>
           <Drawer
             anchor={anchor}
             open={state[anchor]}

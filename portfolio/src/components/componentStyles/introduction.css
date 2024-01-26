@@ -3,11 +3,6 @@ p {
 }
 
 h2{
-  font-size: 200%;
-}
-
-@media (max-width: 767px) {
-  p {
-      display: none;
-  }
+  font-size: 300%;
+  margin: 0px;
 }
