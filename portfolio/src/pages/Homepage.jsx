@@ -23,10 +23,9 @@ export default function HomePage(){
               <img src="https://i.imgur.com/Z8vq1nH.jpg"/>
             </div>
             <div className='professionalTitle'>
-              <p>Aspiring<br/>Computer Scientist and Software Engineer
+              <p>Aspiring<br/>Computer Scientist<br/>and Software Engineer
               <br/> <a className='iconLink' href='https://github.com/joshduplaa'><GitHubIcon/></a> <a className='iconLink' href='https://www.linkedin.com/in/joshua-duplaa-487502178/'><LinkedInIcon/></a> <a className='iconLink' href='https://leetcode.com/joshduplaa/'><CodeIcon/></a> </p>
             </div>
-          
           </div>
           <div id = 'personalStatement'>
             <Introduction></Introduction>
@@ -38,7 +37,7 @@ export default function HomePage(){
               variant="outlined"
               color="success"
               href="https://drive.google.com/uc?export=download&id=1_X__liQI7fJLtBbgVuGKJ67_sS49ZaMo"
-              download="Josh.pdf"
+              download="JoshuaDuplaa_Resume.pdf"
               sx = {{fontWeight: '900'}}
             >
               Download Resume

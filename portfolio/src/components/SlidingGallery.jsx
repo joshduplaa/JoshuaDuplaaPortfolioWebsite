@@ -81,6 +81,13 @@ export default function SlidingGallery() {
                         <figcaption>Microcontroller Asteroids Game</figcaption>
                         </Link>
                     </figure>
+                    
+                    <figure className="image-container">
+                        <img className="image videochat" src="https://i.imgur.com/kyQobki.jpg" draggable="false" />
+                        <Link to="/staringcontest" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <figcaption>Staring Contest Video Chat</figcaption>
+                        </Link>
+                    </figure>
                     <figure className="image-container">
                         <img className="image bioinformatics" src="https://i.imgur.com/bRzg0cD.jpg" draggable="false" />
                         <Link to="/drugdiscovery" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -94,27 +101,9 @@ export default function SlidingGallery() {
                         </Link>
                     </figure>
                     <figure className="image-container">
-                        <img className="image videochat" src="https://i.imgur.com/kyQobki.jpg" draggable="false" />
-                        <Link to="/staringcontest" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <figcaption>Staring Contest Video Chat</figcaption>
-                        </Link>
-                    </figure>
-                    <figure className="image-container">
-                        <img className="image chatBot" src="https://i.imgur.com/kyQobki.jpg" draggable="false" />
-                        <Link to="/chatbot" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <figcaption>Clothing Chat Bot</figcaption>
-                        </Link>
-                    </figure>
-                    <figure className="image-container">
-                        <img className="image tradingBot" src="https://i.imgur.com/pkwrT45.png" draggable="false" />
+                        <img className="image PrisonDash" src="https://i.imgur.com/cza275r.jpg" draggable="false" />
                         <Link to="/prison" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <figcaption>Prison Analyitical Dashboard</figcaption>
-                        </Link>
-                    </figure>
-                    <figure className="image-container">
-                        <img className="image leetcode" src="https://i.imgur.com/pkwrT45.png" draggable="false" />
-                        <Link to="/leetcode" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <figcaption>LeetCode</figcaption>
                         </Link>
                     </figure>
                 </div>

@@ -5,7 +5,7 @@
   background-color: transparent;
   position: absolute;
   display: flex;
-  left: 50%;
+  left: 20%;
   transform: translate(0%, 0%); 
   user-select: none; /* -- Prevent image highlighting -- */
   overflow-x: hidden;
