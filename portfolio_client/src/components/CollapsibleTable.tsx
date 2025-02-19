@@ -123,7 +123,7 @@ export default function CollapsibleTable() {
             <TableCell align="right">Calories</TableCell>
             <TableCell align="right">Start&nbsp;(g)</TableCell>
             <TableCell align="right">End&nbsp;(g)</TableCell>
-            <TableCell align="right">Tech Stack</TableCell>
+            <TableCell align="right">Tech Stack&nbsp;(g)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
