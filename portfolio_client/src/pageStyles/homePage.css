@@ -1,0 +1,54 @@
+
+.introPic {
+  display: flex; /*flexbox*/
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Ensure text inside elements is centered */
+}
+
+.homepage {
+  display: grid;
+  grid-template-columns: 1fr 4fr; /* Two columns: Sidebar and Main Content */
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+}
+
+
+#profilePic{
+  width: 200px;
+  height: 200px;
+  border: 5px solid #289726;
+  background-color: #dfdfdf;
+  border-radius: 50%;
+  
+}
+#profilePic img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+#proTitle{
+  font-size: 90%
+
+}
+#proTitle p{
+  margin-bottom: 4px;
+}
+#socialIcons{
+  display: flex; /*flexbox*/
+  flex-direction: row; /* stack icons horizontally */
+  gap: 10px;
+
+}
+
+a:visited {
+  color: white;
+}
+
+#personalStatement{
+  padding-right: 5%;
+}
+
