@@ -42,6 +42,17 @@ export default function HomePage(){
               >
                 Download Resume
               </Button>
+              <br /><br />
+          </div>
+          <div id ="biography">
+          <Button
+                variant="outlined"
+                color="success"
+                href="/contact"
+                sx = {{fontWeight: '900'}}
+              >
+                About Me
+              </Button>
           </div>
           
         </div>

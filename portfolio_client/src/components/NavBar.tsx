@@ -13,8 +13,8 @@ export default function NavBar() {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} />
 
         <div className='navTabs'>
-          <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Button color="inherit">About Me</Button>
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Button color="inherit">Home</Button>
           </Link>
           <Link to="/projects" style={{ textDecoration: 'none', color: 'inherit' }}>
             <Button color="inherit">Projects</Button>
