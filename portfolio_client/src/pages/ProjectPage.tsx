@@ -1,52 +1,44 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
-
-import "../pageStyles/projectPages.css"
+import { motion } from "motion/react"
+import Parallax from '../components/Parallax';
+import "../pageStyles/projectPages.css";
+import NavBar from '../components/NavBar';
 
 export default function ProjectPage(){
   return(
     <>
-      <h2>Project Page</h2>
-      <p><b>*UNDER CONSTRUCTION*</b></p>
-      <div className="Project-Gallery">
-        <figure className="image-container">
-            <img className="image lottery" src="https://i.imgur.com/itWmXTO.jpg" draggable="false" />
-            <Link to="/lps" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <figcaption>Lottery Purchase System</figcaption>
-            </Link>
-        </figure>
-        <figure className="image-container">
-            <img className="image assembly" src="https://i.imgur.com/5dPXoTY.jpg" draggable="false" />
-            <Link to="/avr" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <figcaption>Microcontroller Asteroids Game</figcaption>
-            </Link>
-        </figure>
-        
-        <figure className="image-container">
-            <img className="image videochat" src="https://i.imgur.com/kyQobki.jpg" draggable="false" />
-            <Link to="/staringcontest" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <figcaption>Staring Contest Video Chat</figcaption>
-            </Link>
-        </figure>
-        <figure className="image-container">
-            <img className="image bioinformatics" src="https://i.imgur.com/bRzg0cD.jpg" draggable="false" />
-            <Link to="/drugdiscovery" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <figcaption>Drug Discovery App</figcaption>
-            </Link>
-        </figure>
-        <figure className="image-container">
-            <img className="image waterTest" src="https://i.imgur.com/BivwvkL.jpg" draggable="false" />
-            <Link to="/iotwater" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <figcaption>IoT Water Monitor</figcaption>
-            </Link>
-        </figure>
-        <figure className="image-container">
-            <img className="image PrisonDash" src="https://i.imgur.com/cza275r.jpg" draggable="false" />
-            <Link to="/prison" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <figcaption>Prison Analyitical Dashboard</figcaption>
-            </Link>
-        </figure>
+      
+      <div className="project-page">
+      <NavBar></NavBar>
+        <div className="intro-section">
+            <h1>Project Page</h1>
+            <p><b>I'm a software engineer with a strong background in computer science, mathematics, 
+              and data science, specializing in bioinformatics, AI, and web development. I develop different kinds of applications, 
+              from implementing sequence alignment algorithms like Needleman-Wunsch and 
+              Smith-Waterman to building Neural Network video classification models for skateboard tricks. I have 
+              experience in full-stack web development, working with technologies like React, TypeScript, MUI, 
+              and .NET to create interactive and efficient applications, including a Laboratory Information System 
+              (LIS) training simulator. My expertise extends to DevOps, cloud infrastructure, and software performance
+               optimization. I'm especially interested in AI-driven drug discovery, where I aim to apply machine learning, 
+               data analysis, and high-performance computing to solve real-world biomedical challenges.<br/><br/>
+               Links to the either the github page, demo app, jupyter notebook, or all three are included with each project.<br/><br/><br/><br/><br/><br/><br/><br/>
+               Scroll down to view projects</b></p>
+               {/* Animated Downward Chevron */}
+
+            
+            <motion.div
+              className="chevron"
+              animate={{ y: [0, 50, 0] }} // Smooth bounce animation
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            >
+              ▼
+            </motion.div>
+               
+        </div>
       </div>
+      <Parallax></Parallax>
+
     </>
   );
 }

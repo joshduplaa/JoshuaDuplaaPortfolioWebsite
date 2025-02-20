@@ -1,3 +1,9 @@
+p{
+  color: #FFFFFF;
+}
+h1{
+  color: #FFFFFF;
+}
 
 .introPic {
   display: flex; /*flexbox*/
@@ -31,12 +37,13 @@
 }
 
 #proTitle{
-  font-size: 90%
-
+  font-size: 90%;
 }
 #proTitle p{
   margin-bottom: 4px;
 }
+
+
 #socialIcons{
   display: flex; /*flexbox*/
   flex-direction: row; /* stack icons horizontally */

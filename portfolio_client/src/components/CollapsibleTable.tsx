@@ -14,33 +14,14 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 function createData(
-  name: string,
-  calories: number,
-  fat: number,
-  carbs: number,
-  protein: number,
-  price: number,
+  Title: string,
+  Company: string,
+  Start: string,
+  End: string,
+  description: string // Add description parameter
+
 ) {
-  return {
-    name,
-    calories,
-    fat,
-    carbs,
-    protein,
-    price,
-    history: [
-      {
-        date: '2020-01-05',
-        customerId: '11091700',
-        amount: 3,
-      },
-      {
-        date: '2020-01-02',
-        customerId: 'Anonymous',
-        amount: 1,
-      },
-    ],
-  };
+  return { Title, Company, Start, End, description };
 }
 
 function Row(props: { row: ReturnType<typeof createData> }) {
@@ -55,49 +36,28 @@ function Row(props: { row: ReturnType<typeof createData> }) {
             aria-label="expand row"
             size="small"
             onClick={() => setOpen(!open)}
+            sx={{ color: 'white', fontSize: '1.2rem' }}
           >
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
-        <TableCell component="th" scope="row">
-          {row.name}
+        <TableCell component="th" scope="row" sx={{ color: 'white', fontSize: '1.2rem' }}>
+          {row.Title}
         </TableCell>
-        <TableCell align="right">{row.calories}</TableCell>
-        <TableCell align="right">{row.fat}</TableCell>
-        <TableCell align="right">{row.carbs}</TableCell>
-        <TableCell align="right">{row.protein}</TableCell>
+        <TableCell align="left" sx={{ color: 'white', fontSize: '1.2rem' }}>{row.Company}</TableCell>
+        <TableCell align="right" sx={{ color: 'white', fontSize: '1.2rem' }}>{row.Start}</TableCell>
+        <TableCell align="right" sx={{ color: 'white', fontSize: '1.2rem' }}>{row.End}</TableCell>
       </TableRow>
       <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6} sx={{ color: 'white', fontSize: '1.2rem' }}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
               <Typography variant="h6" gutterBottom component="div">
-                History
+                Description
               </Typography>
-              <Table size="small" aria-label="purchases">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Date</TableCell>
-                    <TableCell>Customer</TableCell>
-                    <TableCell align="right">Amount</TableCell>
-                    <TableCell align="right">Total price ($)</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {row.history.map((historyRow) => (
-                    <TableRow key={historyRow.date}>
-                      <TableCell component="th" scope="row">
-                        {historyRow.date}
-                      </TableCell>
-                      <TableCell>{historyRow.customerId}</TableCell>
-                      <TableCell align="right">{historyRow.amount}</TableCell>
-                      <TableCell align="right">
-                        {Math.round(historyRow.amount * row.price * 100) / 100}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
+              <Typography variant="body1" sx={{ color: 'white' }}>
+                {row.description} {/* Display description here */}
+              </Typography>
             </Box>
           </Collapse>
         </TableCell>
@@ -106,29 +66,28 @@ function Row(props: { row: ReturnType<typeof createData> }) {
   );
 }
 const rows = [
-  createData('ResMed', 159, 6.0, 24, 4.0, 3.99),
-  createData('Texas Tech University IMSE', 237, 9.0, 37, 4.3, 4.99),
-  createData('Texas Tech University TLPDC', 262, 16.0, 24, 6.0, 3.79),
-  createData('Texas Tech University Applied Vision Lab', 305, 3.7, 67, 4.3, 2.5),
-  createData('Certifications', 356, 16.0, 49, 3.9, 1.5),
+  createData('Data Analyst', 'TTU IMSE', 'October 2023', 'January 2025', 'Analyzed and visualized data to support industrial engineering research.'),
+  createData('DevOps Engineer Intern II', 'ResMed', 'May 2024', 'August 2024', 'Worked on CI/CD pipelines and cloud infrastructure improvements.'),
+  createData('DevOps Engineer Intern', 'ResMed', 'June 2023', 'September 2023', 'Automated deployment processes and enhanced system monitoring.'),
+  createData('Learning Assistant', 'TTU TLPDC', 'August 2022', 'January 2023', 'Assisted students with coursework and facilitated active learning sessions.'),
+  createData('UG Research Assistant', 'TTU AVL', 'August 2022', 'January 2023','Assisted in data collection for researchers working on an image recognition network to count cotton in real time.' )
 ];
 export default function CollapsibleTable() {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
       <Table aria-label="collapsible table">
         <TableHead>
-          <TableRow>
-            <TableCell />
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Start&nbsp;(g)</TableCell>
-            <TableCell align="right">End&nbsp;(g)</TableCell>
-            <TableCell align="right">Tech Stack&nbsp;(g)</TableCell>
+          <TableRow sx={{ backgroundColor: 'transparent' }}>
+            <TableCell sx={{ color: 'white', fontSize: '1.2rem' }} />
+            <TableCell sx={{ color: 'white', fontSize: '1.2rem' }}>Title</TableCell>
+            <TableCell sx={{ color: 'white', fontSize: '1.2rem' }}>Company</TableCell>
+            <TableCell align="right" sx={{ color: 'white', fontSize: '1.2rem' }}>Start</TableCell>
+            <TableCell align="right" sx={{ color: 'white', fontSize: '1.2rem' }}>End</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <Row key={row.name} row={row} />
+            <Row key={row.Title} row={row} />
           ))}
         </TableBody>
       </Table>
