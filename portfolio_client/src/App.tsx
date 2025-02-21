@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Avr from './pages/projectPages/Avr.tsx';
 import Lps from './pages/projectPages/Lps.tsx';
@@ -15,7 +15,7 @@ import ProjectPage from './pages/ProjectPage.tsx'
 import particlesOptions from "./particles.json";
 import { ISourceOptions } from "@tsparticles/engine";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import type { Engine } from "@tsparticles/engine";
+//import type { Engine } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
 
 

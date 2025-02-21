@@ -5,57 +5,135 @@ h1{
   color: #FFFFFF;
 }
 
-.introPic {
-  display: flex; /*flexbox*/
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  text-align: center; /* Ensure text inside elements is centered */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
 }
+
+/* Adjust button sizes on smaller screens */
+@media (max-width: 480px) {
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+
+.introPic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 400px; /* Prevents excessive scaling */
+  margin: auto; /* Centering on smaller screens */
+}
+
+/* Ensure spacing is reasonable on mobile */
+@media (max-width: 480px) {
+  .introPic {
+    max-width: 100%; /* Allow full-width on very small screens */
+  }
+}
+
 
 .homepage {
   display: grid;
-  grid-template-columns: 1fr 4fr; /* Two columns: Sidebar and Main Content */
+  grid-template-columns: 1fr 4fr; /* Default layout for larger screens */
   gap: 20px;
   padding: 20px;
   align-items: center;
 }
 
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .homepage {
+    grid-template-columns: 1fr; /* Stack everything in one column */
+    text-align: center;
+  }
+}
 
-#profilePic{
-  width: 200px;
-  height: 200px;
-  border: 5px solid #289726;
+
+#profilePic {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #289726;
   background-color: #dfdfdf;
   border-radius: 50%;
-  
 }
+
 #profilePic img {
   height: 100%;
   width: 100%;
   border-radius: 50%;
 }
 
-#proTitle{
-  font-size: 90%;
+/* Adjust for smaller screens */
+@media (max-width: 480px) {
+  #profilePic {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #289726;
+  }
 }
+
+
+#proTitle {
+  font-size: 1.2rem;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  #proTitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #proTitle {
+    font-size: 0.9rem;
+  }
+}
+
 #proTitle p{
   margin-bottom: 4px;
 }
 
 
-#socialIcons{
-  display: flex; /*flexbox*/
-  flex-direction: row; /* stack icons horizontally */
+#socialIcons {
+  display: flex;
+  flex-wrap: wrap; /* Allow icons to wrap instead of being squished */
+  justify-content: center; /* Center icons */
   gap: 10px;
-
 }
+
+/* Adjust for small screens */
+@media (max-width: 480px) {
+  #socialIcons {
+    gap: 5px; /* Reduce space between icons */
+  }
+}
+
 
 a:visited {
   color: white;
 }
 
-#personalStatement{
+#personalStatement {
   padding-right: 5%;
+  max-width: 100%; /* Prevents overflow */
 }
 
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  #personalStatement {
+    padding-right: 2%;
+  }
+}
+
+@media (max-width: 480px) {
+  #personalStatement {
+    padding-right: 0; /* Remove padding to use full width */
+  }
+}
