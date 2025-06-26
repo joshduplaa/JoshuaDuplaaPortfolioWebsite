@@ -6,10 +6,11 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import particlesOptions from "../particles.json";
 import { useEffect, useState } from "react";
-
+import { useTheme } from './MuiThemeProvider';
 
 export default function ParticlesBackground() {
     const [ init, setInit ] = useState(false);
+    const { isDarkMode } = useTheme();
 
     useEffect(() => {
         initParticlesEngine(async (engine) => {
@@ -18,6 +19,11 @@ export default function ParticlesBackground() {
             setInit(true);
         });
     }, []);
+
+    // Don't render particles in light mode
+    if (!isDarkMode) {
+        return null;
+    }
 
     // Create a modified options object with proper z-index
     const modifiedOptions = {

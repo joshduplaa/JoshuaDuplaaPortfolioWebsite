@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { useTheme } from './MuiThemeProvider';
 
 function createData(
   Title: string,
@@ -27,6 +28,9 @@ function createData(
 function Row(props: { row: ReturnType<typeof createData> }) {
   const { row } = props;
   const [open, setOpen] = React.useState(false);
+  const { isDarkMode } = useTheme();
+  const textColor = isDarkMode ? '#ffffff' : '#202124';
+  const secondaryTextColor = isDarkMode ? '#e0e0e0' : '#5f6368';
 
   return (
     <React.Fragment>
@@ -36,26 +40,26 @@ function Row(props: { row: ReturnType<typeof createData> }) {
             aria-label="expand row"
             size="small"
             onClick={() => setOpen(!open)}
-            sx={{ color: '#ffffff' }}
+            sx={{ color: textColor }}
           >
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
-        <TableCell component="th" scope="row" sx={{ color: '#ffffff' }}>
+        <TableCell component="th" scope="row" sx={{ color: textColor }}>
           {row.Title}
         </TableCell>
-        <TableCell align="left" sx={{ color: '#ffffff' }}>{row.Company}</TableCell>
-        <TableCell align="right" sx={{ color: '#ffffff' }}>{row.Start}</TableCell>
-        <TableCell align="right" sx={{ color: '#ffffff' }}>{row.End}</TableCell>
+        <TableCell align="left" sx={{ color: textColor }}>{row.Company}</TableCell>
+        <TableCell align="right" sx={{ color: textColor }}>{row.Start}</TableCell>
+        <TableCell align="right" sx={{ color: textColor }}>{row.End}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
-              <Typography variant="h6" gutterBottom component="div" sx={{ color: '#ffffff' }}>
+              <Typography variant="h6" gutterBottom component="div" sx={{ color: textColor }}>
                 Description
               </Typography>
-              <Typography variant="body1" sx={{ color: '#e0e0e0' }}>
+              <Typography variant="body1" sx={{ color: secondaryTextColor }}>
                 {row.description} {/* Display description here */}
               </Typography>
             </Box>
@@ -73,16 +77,20 @@ const rows = [
   createData('UG Research Assistant', 'TTU AVL', 'August 2022', 'January 2023','Assisted in data collection for researchers working on an image recognition network to count cotton in real time.' )
 ];
 export default function CollapsibleTable() {
+  const { isDarkMode } = useTheme();
+  const textColor = isDarkMode ? '#ffffff' : '#202124';
+  const backgroundColor = isDarkMode ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.9)';
+
   return (
-    <TableContainer sx={{ backgroundColor: 'rgba(0, 0, 0, 0.3)', borderRadius: 2 }}>
+    <TableContainer sx={{ backgroundColor, borderRadius: 2 }}>
       <Table aria-label="collapsible table">
         <TableHead>
           <TableRow >
-            <TableCell sx={{ color: '#ffffff' }}/>
-            <TableCell sx={{ color: '#ffffff', fontWeight: 'bold' }}>Title</TableCell>
-            <TableCell sx={{ color: '#ffffff', fontWeight: 'bold' }}>Company</TableCell>
-            <TableCell align="right" sx={{ color: '#ffffff', fontWeight: 'bold' }}>Start</TableCell>
-            <TableCell align="right" sx={{ color: '#ffffff', fontWeight: 'bold' }}>End</TableCell>
+            <TableCell sx={{ color: textColor }}/>
+            <TableCell sx={{ color: textColor, fontWeight: 'bold' }}>Title</TableCell>
+            <TableCell sx={{ color: textColor, fontWeight: 'bold' }}>Company</TableCell>
+            <TableCell align="right" sx={{ color: textColor, fontWeight: 'bold' }}>Start</TableCell>
+            <TableCell align="right" sx={{ color: textColor, fontWeight: 'bold' }}>End</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
