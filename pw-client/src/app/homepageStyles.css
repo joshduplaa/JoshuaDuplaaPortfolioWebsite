@@ -38,7 +38,9 @@ button {
     gap: 20px;
     padding: 20px;
     align-items: center;
-  }
+    position: relative;
+    z-index: 2;
+}
   
   
   
@@ -68,10 +70,12 @@ button {
   
 #proTitle {
     font-size: 1.2rem;
+    color: #ffffff;
   }
 
 #proTitle p{
     margin-bottom: 4px;
+    color: #ffffff;
   }
   
   /* Adjust for smaller screens */
@@ -98,6 +102,7 @@ a:visited {
 #personalStatement {
     padding-right: 5%;
     max-width: 100%; /* Prevents overflow */
+    color: #ffffff;
   }
   
   /* Adjust for smaller screens */
@@ -115,8 +120,10 @@ a:visited {
 
 
 /*Experience section*/
-.experience{
+.experience {
     width: 80%;
+    position: relative;
+    z-index: 2;
 }
   /* --- Responsive improvements for homepage --- */
   
@@ -129,6 +136,7 @@ a:visited {
     border-radius: 18px;
     margin: 0 auto;
     max-width: 500px;
+    color: #ffffff;
   }
   
 .introDetails button {
@@ -151,6 +159,7 @@ a:visited {
   /* Ensure icon links are easily tappable */
 #socialIcons .iconLink {
     transition: background 0.2s;
+    color: #ffffff;
   }
 #socialIcons .iconLink:active, #socialIcons .iconLink:focus {
     background: rgba(40,151,38,0.15);

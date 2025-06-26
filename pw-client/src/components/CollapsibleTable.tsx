@@ -36,25 +36,26 @@ function Row(props: { row: ReturnType<typeof createData> }) {
             aria-label="expand row"
             size="small"
             onClick={() => setOpen(!open)}
+            sx={{ color: '#ffffff' }}
           >
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell component="th" scope="row" sx={{ color: '#ffffff' }}>
           {row.Title}
         </TableCell>
-        <TableCell align="left" >{row.Company}</TableCell>
-        <TableCell align="right" >{row.Start}</TableCell>
-        <TableCell align="right" >{row.End}</TableCell>
+        <TableCell align="left" sx={{ color: '#ffffff' }}>{row.Company}</TableCell>
+        <TableCell align="right" sx={{ color: '#ffffff' }}>{row.Start}</TableCell>
+        <TableCell align="right" sx={{ color: '#ffffff' }}>{row.End}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
-              <Typography variant="h6" gutterBottom component="div">
+              <Typography variant="h6" gutterBottom component="div" sx={{ color: '#ffffff' }}>
                 Description
               </Typography>
-              <Typography variant="body1">
+              <Typography variant="body1" sx={{ color: '#e0e0e0' }}>
                 {row.description} {/* Display description here */}
               </Typography>
             </Box>
@@ -73,15 +74,15 @@ const rows = [
 ];
 export default function CollapsibleTable() {
   return (
-    <TableContainer>
+    <TableContainer sx={{ backgroundColor: 'rgba(0, 0, 0, 0.3)', borderRadius: 2 }}>
       <Table aria-label="collapsible table">
         <TableHead>
           <TableRow >
-            <TableCell/>
-            <TableCell >Title</TableCell>
-            <TableCell >Company</TableCell>
-            <TableCell align="right" >Start</TableCell>
-            <TableCell align="right" >End</TableCell>
+            <TableCell sx={{ color: '#ffffff' }}/>
+            <TableCell sx={{ color: '#ffffff', fontWeight: 'bold' }}>Title</TableCell>
+            <TableCell sx={{ color: '#ffffff', fontWeight: 'bold' }}>Company</TableCell>
+            <TableCell align="right" sx={{ color: '#ffffff', fontWeight: 'bold' }}>Start</TableCell>
+            <TableCell align="right" sx={{ color: '#ffffff', fontWeight: 'bold' }}>End</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

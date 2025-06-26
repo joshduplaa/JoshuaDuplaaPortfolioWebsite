@@ -8,19 +8,32 @@ import Link from 'next/link';
 
 export default function NavBar() {
   return (
-    <AppBar className= 'Appbar' position="relative" color="default" sx={{ backgroundColor: "transparent", boxShadow: 'none', width: '100%' }}>    
-      <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} />
+    <AppBar 
+      className='Appbar' 
+      position="relative" 
+      color="default" 
+      elevation={0}
+      sx={{ 
+        backgroundColor: "transparent !important", 
+        boxShadow: 'none !important', 
+        width: '100%',
+        position: 'relative',
+        zIndex: 3,
+        backgroundImage: 'none !important'
+      }}
+    >    
+      <Toolbar sx={{ backgroundColor: 'transparent !important' }}>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: '#ffffff' }} />
 
         <div className='navTabs'>
             <Link href="/" >
-              <Button color="inherit">Home</Button>
+              <Button color="inherit" sx={{ color: '#ffffff' }}>Home</Button>
             </Link>
             <Link href="/Projects">
-              <Button color="inherit">Projects</Button>
+              <Button color="inherit" sx={{ color: '#ffffff' }}>Projects</Button>
             </Link>
             <Link href="/Contact">
-              <Button color="inherit">Contact</Button>
+              <Button color="inherit" sx={{ color: '#ffffff' }}>Contact</Button>
             </Link>
        
         </div>

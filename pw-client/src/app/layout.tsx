@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import MuiThemeProvider from "../components/MuiThemeProvider"; // adjust path if needed
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import ParticlesBackground from "../components/ParticlesBackground";
 
 
 const geistSans = Geist({
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <AppRouterCacheProvider>
           <MuiThemeProvider>
+            <ParticlesBackground />
             {children}
           </MuiThemeProvider>
         </AppRouterCacheProvider>
