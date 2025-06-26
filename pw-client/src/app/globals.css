@@ -5,8 +5,7 @@
   text-align: center;
 }
 
-html,
-body {
+html, body {
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -68,13 +67,4 @@ a {
 
 .read-the-docs {
   color: #888;
-}
-
-.particleBG {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Ensures particles are behind everything */
-  top: 0;
-  left: 0;
 }

@@ -12,7 +12,6 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { useTheme } from '@mui/material/styles';
 
 function createData(
   Title: string,
@@ -28,7 +27,6 @@ function createData(
 function Row(props: { row: ReturnType<typeof createData> }) {
   const { row } = props;
   const [open, setOpen] = React.useState(false);
-  const theme = useTheme();
 
   return (
     <React.Fragment>
@@ -38,26 +36,25 @@ function Row(props: { row: ReturnType<typeof createData> }) {
             aria-label="expand row"
             size="small"
             onClick={() => setOpen(!open)}
-            sx={{ color: theme.palette.text.primary, fontSize: '1.2rem' }}
           >
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
-        <TableCell component="th" scope="row" sx={{ color: theme.palette.text.primary, fontSize: '1.2rem' }}>
+        <TableCell component="th" scope="row">
           {row.Title}
         </TableCell>
-        <TableCell align="left" sx={{ color: theme.palette.text.primary, fontSize: '1.2rem' }}>{row.Company}</TableCell>
-        <TableCell align="right" sx={{ color: theme.palette.text.primary, fontSize: '1.2rem' }}>{row.Start}</TableCell>
-        <TableCell align="right" sx={{ color: theme.palette.text.primary, fontSize: '1.2rem' }}>{row.End}</TableCell>
+        <TableCell align="left" >{row.Company}</TableCell>
+        <TableCell align="right" >{row.Start}</TableCell>
+        <TableCell align="right" >{row.End}</TableCell>
       </TableRow>
       <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6} sx={{ color: 'white', fontSize: '1.2rem' }}>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
               <Typography variant="h6" gutterBottom component="div">
                 Description
               </Typography>
-              <Typography variant="body1" sx={{ color: theme.palette.text.primary }}>
+              <Typography variant="body1">
                 {row.description} {/* Display description here */}
               </Typography>
             </Box>
@@ -75,17 +72,16 @@ const rows = [
   createData('UG Research Assistant', 'TTU AVL', 'August 2022', 'January 2023','Assisted in data collection for researchers working on an image recognition network to count cotton in real time.' )
 ];
 export default function CollapsibleTable() {
-  const theme = useTheme();
   return (
-    <TableContainer component={Paper} sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
+    <TableContainer>
       <Table aria-label="collapsible table">
         <TableHead>
-          <TableRow sx={{ backgroundColor: 'transparent' }}>
-            <TableCell sx={{ color: theme.palette.text.primary, fontSize: '1.2rem' }} />
-            <TableCell sx={{ color: theme.palette.text.primary, fontSize: '1.2rem' }}>Title</TableCell>
-            <TableCell sx={{ color: theme.palette.text.primary, fontSize: '1.2rem' }}>Company</TableCell>
-            <TableCell align="right" sx={{ color: theme.palette.text.primary, fontSize: '1.2rem' }}>Start</TableCell>
-            <TableCell align="right" sx={{ color: theme.palette.text.primary, fontSize: '1.2rem' }}>End</TableCell>
+          <TableRow >
+            <TableCell/>
+            <TableCell >Title</TableCell>
+            <TableCell >Company</TableCell>
+            <TableCell align="right" >Start</TableCell>
+            <TableCell align="right" >End</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

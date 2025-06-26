@@ -1,17 +1,11 @@
-p{
-    color: #FFFFFF;
-  }
-  h1{
-    color: #FFFFFF;
-  }
   
-  button {
+button {
     padding: 10px 20px;
     font-size: 1rem;
   }
   
   /* Adjust button sizes on smaller screens */
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
     button {
       padding: 8px 16px;
       font-size: 0.9rem;
@@ -19,7 +13,7 @@ p{
   }
   
   
-  .introPic {
+.introPic {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,14 +25,14 @@ p{
   }
   
   /* Ensure spacing is reasonable on mobile */
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
     .introPic {
       max-width: 100%; /* Allow full-width on very small screens */
     }
   }
   
   
-  .homepage {
+.homepage {
     display: grid;
     grid-template-columns: 1fr 4fr; /* Default layout for larger screens */
     gap: 20px;
@@ -46,16 +40,9 @@ p{
     align-items: center;
   }
   
-  /* Adjust layout for smaller screens */
-  @media (max-width: 768px) {
-    .homepage {
-      grid-template-columns: 1fr; /* Stack everything in one column */
-      text-align: center;
-    }
-  }
   
   
-  #profilePic {
+#profilePic {
     width: 150px;
     height: 150px;
     border: 4px solid #289726;
@@ -63,14 +50,14 @@ p{
     border-radius: 50%;
   }
   
-  #profilePic img {
+#profilePic img {
     height: 100%;
     width: 100%;
     border-radius: 50%;
   }
   
   /* Adjust for smaller screens */
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
     #profilePic {
       width: 120px;
       height: 120px;
@@ -79,170 +66,93 @@ p{
   }
   
   
-  #proTitle {
+#proTitle {
     font-size: 1.2rem;
+  }
+
+#proTitle p{
+    margin-bottom: 4px;
   }
   
   /* Adjust for smaller screens */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     #proTitle {
       font-size: 1rem;
     }
   }
   
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
     #proTitle {
       font-size: 0.9rem;
     }
   }
   
-  #proTitle p{
-    margin-bottom: 4px;
-  }
+
   
-  
-  #socialIcons {
-    display: flex;
-    flex-wrap: wrap; /* Allow icons to wrap instead of being squished */
-    justify-content: center; /* Center icons */
-    gap: 10px;
-  }
-  
-  /* Adjust for small screens */
-  @media (max-width: 480px) {
-    #socialIcons {
-      gap: 5px; /* Reduce space between icons */
-    }
-  }
-  
-  
-  a:visited {
+a:visited {
     color: white;
   }
+
+/*Personal Statement*/
   
-  #personalStatement {
+#personalStatement {
     padding-right: 5%;
     max-width: 100%; /* Prevents overflow */
   }
   
   /* Adjust for smaller screens */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     #personalStatement {
       padding-right: 2%;
     }
   }
   
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
     #personalStatement {
       padding-right: 0; /* Remove padding to use full width */
     }
   }
-  
+
+
+/*Experience section*/
+.experience{
+    width: 80%;
+}
   /* --- Responsive improvements for homepage --- */
   
-  .introDetails {
+.introDetails {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
     padding: 32px 24px;
-    background: rgba(40, 151, 38, 0.08);
     border-radius: 18px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
     margin: 0 auto;
     max-width: 500px;
   }
   
-  @media (max-width: 768px) {
-    .introDetails {
-      padding: 20px 8px;
-      max-width: 100%;
-      gap: 14px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .introDetails {
-      padding: 12px 2px;
-      gap: 10px;
-      border-radius: 10px;
-    }
-  }
-  
-  .experience {
-    margin: 40px auto 0 auto;
-    padding: 32px 24px;
-    background: rgba(40, 151, 38, 0.08);
-    border-radius: 18px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    max-width: 700px;
-  }
-  
-  .experience h1 {
-    font-size: 2rem;
-    margin-bottom: 18px;
-  }
-  
-  @media (max-width: 768px) {
-    .experience {
-      padding: 18px 6px;
-      max-width: 100%;
-    }
-    .experience h1 {
-      font-size: 1.4rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .experience {
-      padding: 10px 2px;
-      border-radius: 10px;
-    }
-    .experience h1 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-  }
-  
-  /* Make homepage sections stack with spacing on mobile */
-  @media (max-width: 768px) {
-    .homepage {
-      gap: 32px;
-      padding: 10px 0;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .homepage {
-      gap: 18px;
-      padding: 4px 0;
-    }
-  }
-  
-  /* Improve button tap targets and spacing */
-  .introDetails button {
+.introDetails button {
     width: 100%;
     min-height: 44px;
     margin-bottom: 8px;
     font-size: 1.1rem;
-  }
-  @media (max-width: 480px) {
-    .introDetails button {
-      font-size: 1rem;
-      min-height: 38px;
     }
-  }
   
-  /* Ensure icon links are easily tappable */
-  #socialIcons .iconLink {
-    padding: 8px;
-    border-radius: 50%;
-    transition: background 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#proTitle p{
+    margin-bottom: 4px;
   }
-  #socialIcons .iconLink:active, #socialIcons .iconLink:focus {
+
+#socialIcons {
+    display: flex;
+    flex-wrap: wrap; /* Allow icons to wrap instead of being squished */
+    justify-content: center; /* Center icons */
+    gap: 10px;
+  }
+  /* Ensure icon links are easily tappable */
+#socialIcons .iconLink {
+    transition: background 0.2s;
+  }
+#socialIcons .iconLink:active, #socialIcons .iconLink:focus {
     background: rgba(40,151,38,0.15);
   }
   
