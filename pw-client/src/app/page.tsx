@@ -36,6 +36,7 @@ export default function Home() {
           <div id = "helloDiv">
             <h1 >Hi &#128075; I'm Joshua Duplaa</h1>
           </div>
+          <p> I'm a Data Scientist and DevOps engineer</p>
           <div id = "resume">
               <Button
                 variant="outlined"
@@ -48,17 +49,7 @@ export default function Home() {
               </Button>
               <br /><br />
           </div>
-          <div id ="biography">
-          <Button
-                variant="outlined"
-                color="success"
-                href="/contact"
-                sx = {{fontWeight: '900'}}
-              >
-                About Me
-              </Button>
-          </div>
-          
+
         </div>
       </div>
       <div className='experience'>
