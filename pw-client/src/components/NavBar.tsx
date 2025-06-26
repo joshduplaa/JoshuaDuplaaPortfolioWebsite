@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function NavBar() {
   return (
-    
+    <AppBar className= 'Appbar' position="relative" color="default" sx={{ backgroundColor: "transparent", boxShadow: 'none', width: '100%' }}>    
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} />
 
@@ -26,6 +26,7 @@ export default function NavBar() {
         </div>
         
       </Toolbar>
+      </AppBar>
     
   );
 }
