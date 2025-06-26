@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import MuiThemeProvider from "../components/MuiThemeProvider"; // adjust path if needed
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pairwise Alignment",
-  description: "Pairwise Alignment App for DNA and Protein Sequences",
+  title: "Joshua Duplaa Portfolio",
+  description: "Joshua Duplaa Porfolio Website and Project Expo",
 };
 
 export default function RootLayout({
@@ -26,9 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <MuiThemeProvider>
-          {children}
-        </MuiThemeProvider>
+        <AppRouterCacheProvider>
+          <MuiThemeProvider>
+            {children}
+          </MuiThemeProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
