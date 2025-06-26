@@ -45,21 +45,49 @@ function Row(props: { row: ReturnType<typeof createData> }) {
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
-        <TableCell component="th" scope="row" sx={{ color: textColor }}>
+        <TableCell component="th" scope="row" sx={{ 
+          color: textColor,
+          fontSize: { xs: '0.875rem', sm: '1rem' },
+          padding: { xs: '8px 4px', sm: '16px' }
+        }}>
           {row.Title}
         </TableCell>
-        <TableCell align="left" sx={{ color: textColor }}>{row.Company}</TableCell>
-        <TableCell align="right" sx={{ color: textColor }}>{row.Start}</TableCell>
-        <TableCell align="right" sx={{ color: textColor }}>{row.End}</TableCell>
+        <TableCell align="left" sx={{ 
+          color: textColor,
+          fontSize: { xs: '0.875rem', sm: '1rem' },
+          padding: { xs: '8px 4px', sm: '16px' }
+        }}>
+          {row.Company}
+        </TableCell>
+        <TableCell align="right" sx={{ 
+          color: textColor,
+          fontSize: { xs: '0.875rem', sm: '1rem' },
+          padding: { xs: '8px 4px', sm: '16px' }
+        }}>
+          {row.Start}
+        </TableCell>
+        <TableCell align="right" sx={{ 
+          color: textColor,
+          fontSize: { xs: '0.875rem', sm: '1rem' },
+          padding: { xs: '8px 4px', sm: '16px' }
+        }}>
+          {row.End}
+        </TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
-              <Typography variant="h6" gutterBottom component="div" sx={{ color: textColor }}>
+              <Typography variant="h6" gutterBottom component="div" sx={{ 
+                color: textColor,
+                fontSize: { xs: '1rem', sm: '1.25rem' }
+              }}>
                 Description
               </Typography>
-              <Typography variant="body1" sx={{ color: secondaryTextColor }}>
+              <Typography variant="body1" sx={{ 
+                color: secondaryTextColor,
+                fontSize: { xs: '0.875rem', sm: '1rem' }
+              }}>
                 {row.description} {/* Display description here */}
               </Typography>
             </Box>
@@ -82,15 +110,52 @@ export default function CollapsibleTable() {
   const backgroundColor = isDarkMode ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.9)';
 
   return (
-    <TableContainer sx={{ backgroundColor, borderRadius: 2 }}>
-      <Table aria-label="collapsible table">
+    <TableContainer sx={{ 
+      backgroundColor, 
+      borderRadius: 2,
+      maxWidth: '100%',
+      overflowX: 'auto'
+    }}>
+      <Table aria-label="collapsible table" sx={{ minWidth: { xs: 300, sm: 650 } }}>
         <TableHead>
           <TableRow >
-            <TableCell sx={{ color: textColor }}/>
-            <TableCell sx={{ color: textColor, fontWeight: 'bold' }}>Title</TableCell>
-            <TableCell sx={{ color: textColor, fontWeight: 'bold' }}>Company</TableCell>
-            <TableCell align="right" sx={{ color: textColor, fontWeight: 'bold' }}>Start</TableCell>
-            <TableCell align="right" sx={{ color: textColor, fontWeight: 'bold' }}>End</TableCell>
+            <TableCell sx={{ 
+              color: textColor,
+              fontSize: { xs: '0.875rem', sm: '1rem' },
+              padding: { xs: '8px 4px', sm: '16px' }
+            }}/>
+            <TableCell sx={{ 
+              color: textColor, 
+              fontWeight: 'bold',
+              fontSize: { xs: '0.875rem', sm: '1rem' },
+              padding: { xs: '8px 4px', sm: '16px' }
+            }}>
+              Title
+            </TableCell>
+            <TableCell sx={{ 
+              color: textColor, 
+              fontWeight: 'bold',
+              fontSize: { xs: '0.875rem', sm: '1rem' },
+              padding: { xs: '8px 4px', sm: '16px' }
+            }}>
+              Company
+            </TableCell>
+            <TableCell align="right" sx={{ 
+              color: textColor, 
+              fontWeight: 'bold',
+              fontSize: { xs: '0.875rem', sm: '1rem' },
+              padding: { xs: '8px 4px', sm: '16px' }
+            }}>
+              Start
+            </TableCell>
+            <TableCell align="right" sx={{ 
+              color: textColor, 
+              fontWeight: 'bold',
+              fontSize: { xs: '0.875rem', sm: '1rem' },
+              padding: { xs: '8px 4px', sm: '16px' }
+            }}>
+              End
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

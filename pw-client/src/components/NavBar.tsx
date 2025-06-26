@@ -26,13 +26,19 @@ export default function NavBar() {
         backgroundImage: 'none !important'
       }}
     >    
-      <Toolbar sx={{ backgroundColor: 'transparent !important' }}>
+      <Toolbar sx={{ 
+        backgroundColor: 'transparent !important',
+        flexDirection: { xs: 'column', sm: 'row' },
+        gap: { xs: 1, sm: 0 },
+        padding: { xs: '8px 16px', sm: '0 24px' }
+      }}>
         {/* Theme Toggle Switch */}
         <FormControlLabel
           control={
             <Switch
               checked={isDarkMode}
               onChange={toggleTheme}
+              size="small"
               sx={{
                 '& .MuiSwitch-switchBase.Mui-checked': {
                   color: '#289726',
@@ -50,7 +56,7 @@ export default function NavBar() {
           sx={{
             color: isDarkMode ? '#ffffff' : '#202124',
             '& .MuiFormControlLabel-label': {
-              fontSize: '0.875rem',
+              fontSize: { xs: '0.75rem', sm: '0.875rem' },
               fontWeight: 500,
             },
           }}
@@ -58,15 +64,47 @@ export default function NavBar() {
 
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} />
 
-        <div className='navTabs'>
+        <div className='navTabs' style={{
+          display: 'flex',
+          flexDirection: 'row',
+          gap: '8px',
+          alignItems: 'center'
+        }}>
             <Link href="/" >
-              <Button color="inherit">Home</Button>
+              <Button 
+                color="inherit" 
+                size="small"
+                sx={{ 
+                  fontSize: { xs: '0.875rem', sm: '1rem' },
+                  padding: { xs: '6px 12px', sm: '8px 16px' }
+                }}
+              >
+                Home
+              </Button>
             </Link>
             <Link href="/Projects">
-              <Button color="inherit">Projects</Button>
+              <Button 
+                color="inherit" 
+                size="small"
+                sx={{ 
+                  fontSize: { xs: '0.875rem', sm: '1rem' },
+                  padding: { xs: '6px 12px', sm: '8px 16px' }
+                }}
+              >
+                Projects
+              </Button>
             </Link>
             <Link href="/Contact">
-              <Button color="inherit">Contact</Button>
+              <Button 
+                color="inherit" 
+                size="small"
+                sx={{ 
+                  fontSize: { xs: '0.875rem', sm: '1rem' },
+                  padding: { xs: '6px 12px', sm: '8px 16px' }
+                }}
+              >
+                Contact
+              </Button>
             </Link>
        
         </div>

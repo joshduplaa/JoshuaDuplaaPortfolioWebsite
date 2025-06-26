@@ -1,4 +1,3 @@
-  
 button {
     padding: 10px 20px;
     font-size: 1rem;
@@ -41,15 +40,31 @@ button {
     position: relative;
     z-index: 2;
 }
-  
+
+/* Mobile responsive - stack components vertically */
+@media (max-width: 768px) {
+    .homepage {
+      grid-template-columns: 1fr; /* Single column layout */
+      gap: 30px;
+      padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage {
+      padding: 10px;
+      gap: 20px;
+    }
+}
   
   
 #profilePic {
     width: 150px;
     height: 150px;
-    border: 4px solid #289726;
+    border: 4px solid;
     background-color: #dfdfdf;
     border-radius: 50%;
+    margin-bottom: 7.5px;
   }
   
 #profilePic img {
@@ -63,31 +78,36 @@ button {
     #profilePic {
       width: 120px;
       height: 120px;
-      border: 3px solid #289726;
+      border: 3px solid;
+      margin-bottom: 6px;
     }
   }
   
   
 #proTitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #ffffff;
+    font-weight: bold;
+    white-space: nowrap;
   }
 
 #proTitle p{
     margin-bottom: 4px;
     color: #ffffff;
+    font-weight: bold;
+    white-space: nowrap;
   }
   
   /* Adjust for smaller screens */
 @media (max-width: 768px) {
     #proTitle {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
   
 @media (max-width: 480px) {
     #proTitle {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
   }
   
@@ -125,6 +145,20 @@ a:visited {
     position: relative;
     z-index: 2;
 }
+
+/* Mobile responsive for experience section */
+@media (max-width: 768px) {
+    .experience {
+      width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience {
+      width: 100%;
+    }
+}
+
   /* --- Responsive improvements for homepage --- */
   
 .introDetails {
@@ -138,6 +172,21 @@ a:visited {
     max-width: 500px;
     color: #ffffff;
   }
+
+/* Mobile responsive for intro details */
+@media (max-width: 768px) {
+    .introDetails {
+      padding: 24px 16px;
+      gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .introDetails {
+      padding: 20px 12px;
+      gap: 12px;
+    }
+}
   
 .introDetails button {
     width: 100%;

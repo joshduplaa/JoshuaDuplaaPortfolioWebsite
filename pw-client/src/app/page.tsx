@@ -16,6 +16,7 @@ import './homepageStyles.css'
 export default function Home() {
   const { isDarkMode } = useTheme();
   const textColor = isDarkMode ? '#ffffff' : '#202124';
+  const borderColor = isDarkMode ? '#289726' : '#202124'; // Green in dark mode, dark gray in light mode
 
   return (
     
@@ -24,12 +25,12 @@ export default function Home() {
       <div className='homepage'>
         <div className='introPic'> 
           <div>
-            <div id='profilePic'>
+            <div id='profilePic' style={{ borderColor: borderColor }}>
               <img src="https://i.imgur.com/fP5IYuB.png"/>
             </div>
           </div>
           <div id='proTitle'>
-            <p>Computer Scientist<br/>Texas Tech University<br/>B.S. Computer Science<br/>B.S. Mathematics</p>
+            <p>Texas Tech University<br/>B.S. Computer Science<br/>B.S. Mathematics</p>
           </div>    
           <div id='socialIcons'>
             <a className='iconLink' href='https://github.com/joshduplaa' target='_blank' rel='noopener noreferrer'><GitHubIcon sx={{ color: textColor }}/></a> <a className='iconLink' href='https://www.linkedin.com/in/joshua-duplaa-487502178/' target='_blank' rel='noopener noreferrer'><LinkedInIcon sx={{ color: textColor }}/></a> <a className='iconLink' href='https://leetcode.com/joshduplaa/' target='_blank' rel='noopener noreferrer'><CodeIcon sx={{ color: textColor }}/></a> 
@@ -37,9 +38,9 @@ export default function Home() {
         </div>
         <div className='introDetails'>
           <div id = "helloDiv">
-            <h1 style={{ color: textColor }}>Hi &#128075; I'm Joshua Duplaa</h1>
+            <h1 style={{ color: textColor, fontSize: '2.5rem', fontWeight: 'bold', whiteSpace: 'nowrap' }}>Hi &#128075; I'm Joshua Duplaa</h1>
           </div>
-          <p style={{ color: textColor }}> I'm a Data Scientist and DevOps engineer</p>
+          <p style={{ color: textColor, marginTop: '-10px' }}> I'm a Data Scientist and DevOps engineer</p>
           <div id = "resume">
               <Button
                 variant="outlined"
