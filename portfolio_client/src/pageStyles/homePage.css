@@ -137,3 +137,111 @@ a:visited {
     padding-right: 0; /* Remove padding to use full width */
   }
 }
+
+/* --- Responsive improvements for homepage --- */
+
+.introDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 32px 24px;
+  background: rgba(40, 151, 38, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .introDetails {
+    padding: 20px 8px;
+    max-width: 100%;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .introDetails {
+    padding: 12px 2px;
+    gap: 10px;
+    border-radius: 10px;
+  }
+}
+
+.experience {
+  margin: 40px auto 0 auto;
+  padding: 32px 24px;
+  background: rgba(40, 151, 38, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  max-width: 700px;
+}
+
+.experience h1 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 18px 6px;
+    max-width: 100%;
+  }
+  .experience h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 10px 2px;
+    border-radius: 10px;
+  }
+  .experience h1 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+}
+
+/* Make homepage sections stack with spacing on mobile */
+@media (max-width: 768px) {
+  .homepage {
+    gap: 32px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage {
+    gap: 18px;
+    padding: 4px 0;
+  }
+}
+
+/* Improve button tap targets and spacing */
+.introDetails button {
+  width: 100%;
+  min-height: 44px;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+@media (max-width: 480px) {
+  .introDetails button {
+    font-size: 1rem;
+    min-height: 38px;
+  }
+}
+
+/* Ensure icon links are easily tappable */
+#socialIcons .iconLink {
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#socialIcons .iconLink:active, #socialIcons .iconLink:focus {
+  background: rgba(40,151,38,0.15);
+}
