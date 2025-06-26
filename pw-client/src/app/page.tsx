@@ -9,6 +9,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import CodeIcon from '@mui/icons-material/Code';
 import CollapsibleTable from '../components/CollapsibleTable';
 import NavBar from "../components/NavBar";
+import './homepageStyles.css';
 
 
 
@@ -36,6 +37,9 @@ export default function Home() {
           <div id = "helloDiv">
             <h1 >Hi &#128075; I'm Joshua Duplaa</h1>
           </div>
+          <div id ="biography">
+            I would call myself a Data Scientist, DevOps Engineer, and aspiring Bioinformatician
+          </div>
           <div id = "resume">
               <Button
                 variant="outlined"
@@ -48,16 +52,7 @@ export default function Home() {
               </Button>
               <br /><br />
           </div>
-          <div id ="biography">
-          <Button
-                variant="outlined"
-                color="success"
-                href="/contact"
-                sx = {{fontWeight: '900'}}
-              >
-                About Me
-              </Button>
-          </div>
+          
           
         </div>
       </div>
