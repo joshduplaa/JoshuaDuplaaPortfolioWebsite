@@ -7,7 +7,6 @@ import Container from '@mui/material/Container';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -55,9 +54,9 @@ export default function Contact() {
     },
     {
       title: 'Phone',
-      value: '(555) 123-4567',
+      value: '(806) 283-4934',
       icon: <PhoneIcon sx={{ fontSize: 40, color: iconColor }} />,
-      link: 'tel:+15551234567',
+      link: 'tel:+18062834934',
       description: 'Available for phone calls during business hours. Please email first for scheduling.'
     }
   ];
@@ -98,9 +97,9 @@ export default function Contact() {
               lineHeight: 1.6
             }}
           >
-            I'm always interested in new opportunities, collaborations, and interesting projects. 
+            I&apos;m always interested in new opportunities, collaborations, and interesting projects. 
             Whether you have a question about my work, want to discuss a potential collaboration, 
-            or just want to say hello, I'd love to hear from you!
+            or just want to say hello, I&apos;d love to hear from you!
           </Typography>
         </Box>
 
@@ -216,7 +215,7 @@ export default function Contact() {
               textAlign: 'center'
             }}
           >
-            Let's Work Together
+            Let&apos;s Work Together
           </Typography>
           
           <Typography 
@@ -230,9 +229,9 @@ export default function Contact() {
               margin: '0 auto'
             }}
           >
-            I'm passionate about solving complex problems through technology and innovation. 
-            Whether you're looking for a software engineer, data scientist, or DevOps specialist, 
-            I'm excited to discuss how we can work together to bring your ideas to life.
+            I&apos;m passionate about solving complex problems through technology and innovation. 
+            Whether you&apos;re looking for a software engineer, data scientist, or DevOps specialist, 
+            I&apos;m excited to discuss how we can work together to bring your ideas to life.
           </Typography>
           
           <Box sx={{ 
@@ -277,6 +276,6 @@ export default function Contact() {
           </Typography>
         </Box>
       </Container>
-      </>
-    );
-  }
+    </>
+  );
+}

@@ -43,46 +43,19 @@ export default function ProjectPage() {
             variant="h6" 
             sx={{ 
               color: secondaryTextColor,
-              fontSize: { xs: '1rem', sm: '1.25rem' },
-              maxWidth: '800px',
+              fontSize: { xs: '0.9rem', sm: '1.1rem' },
+              maxWidth: '840px',
               margin: '0 auto',
               lineHeight: 1.6
             }}
           >
-            I am a software engineer with a strong background in computer science, mathematics, 
-            and data science, with an intense focus in DevOps, bioinformatics, AI, and web development. 
-            I develop different kinds of applications, from implementing sequence alignment algorithms 
-            to building Neural Network video classification models for skateboard tricks.
-          </Typography>
-          
-          <Typography 
-            variant="body1" 
-            sx={{ 
-              color: secondaryTextColor,
-              fontSize: { xs: '0.875rem', sm: '1rem' },
-              maxWidth: '800px',
-              margin: '20px auto 0',
-              lineHeight: 1.6
-            }}
-          >
-            I have built full stack web applications, working with technologies like React, TypeScript, 
-            MUI, .NET, among many other tools and libraries to create interactive and efficient applications. 
-            My professional experience extends to DevOps, cloud infrastructure, and software performance 
-            optimization, working with the DevOps team at ResMed.
-          </Typography>
-          
-          <Typography 
-            variant="body1" 
-            sx={{ 
-              color: secondaryTextColor,
-              fontSize: { xs: '0.875rem', sm: '1rem' },
-              maxWidth: '800px',
-              margin: '20px auto 0',
-              lineHeight: 1.6
-            }}
-          >
-            I'm especially interested in AI-driven drug discovery, where I aim to apply machine learning, 
-            data analysis, and high-performance computing to solve real-world biomedical challenges.
+            I am a computer scientist with a strong background in software engineering, mathematics, and data science, 
+            specializing in DevOps, bioinformatics, AI, and web development. My experience includes building full 
+            stack applications with Python, React, TypeScript, MUI, .NET, among other technologies as well as working on DevOps and Cloud (AWS and Azure) 
+            infrastructure optimization at ResMed. I have developed diverse applications ranging from CRUD apps, Microcontroller projects, 
+            sequence alignment algorithms, to Neural Network video classification models. I am 
+            particularly passionate about Bioinformatics and AI, where I apply machine learning skills, data analysis, 
+            and high-performance computing to solve real-world biological problems.
           </Typography>
         </Box>
 

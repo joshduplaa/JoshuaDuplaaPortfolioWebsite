@@ -12,7 +12,6 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
-import CodeIcon from '@mui/icons-material/Code';
 import { useTheme } from './MuiThemeProvider';
 
 function createProject(
@@ -160,59 +159,171 @@ function ProjectRow(props: { project: ReturnType<typeof createProject> }) {
 
 const projects = [
   createProject(
-    'Skateboard Trick Classifier',
-    'Neural network model for real-time skateboard trick classification using video analysis',
-    'Python, TensorFlow, OpenCV, CNN',
-    'https://demo-skateboard-classifier.vercel.app',
-    'https://github.com/joshduplaa/skateboard-classifier',
-    'A deep learning application that uses computer vision and neural networks to classify skateboard tricks in real-time video. The model was trained on thousands of skateboarding videos and can identify over 20 different tricks with high accuracy.',
+    'BioInformatics Pipeline',
+    'A pipeline that gathers and sorts sequences of DNA or Protein, finds representative sequences and builds clusters, filters out chimeric sequences, and performs multiple sequence alignment on non-chimeric sequences',
+    'Python, Bioinformatics, Sequence Analysis',
+    '',
+    'https://github.com/joshduplaa/Bioinformatics-Pipeline',
+    'A comprehensive bioinformatics pipeline for DNA and protein sequence analysis. The pipeline processes raw sequence data through multiple stages including clustering, chimeric sequence detection, and multiple sequence alignment.',
     [
-      'Real-time video processing and analysis',
-      'CNN architecture optimized for action recognition',
-      'Web interface for easy trick classification',
-      'Mobile-responsive design for on-the-go use'
+      'DNA and protein sequence processing',
+      'Representative sequence clustering',
+      'Chimeric sequence filtering',
+      'Multiple sequence alignment (MSA)'
     ]
   ),
   createProject(
-    'Sequence Alignment Algorithm',
-    'Implementation of Smith-Waterman and Needleman-Wunsch algorithms for bioinformatics',
-    'Python, NumPy, Bioinformatics',
+    'Pairwise Sequence Alignment Tool',
+    'WebApp using Needleman Wunsch and Smithwaterman code for global alignment. Python code is containerized and executed when sequences are given by the user',
+    'Python, React, Docker, Bioinformatics',
     '',
-    'https://github.com/joshduplaa/sequence-alignment',
-    'A comprehensive implementation of fundamental bioinformatics algorithms for DNA and protein sequence alignment. Includes both local (Smith-Waterman) and global (Needleman-Wunsch) alignment algorithms with visualization tools.',
+    'https://github.com/joshduplaa/PairwiseAlignmentApp',
+    'A web application that implements both Needleman-Wunsch (global) and Smith-Waterman (local) sequence alignment algorithms. Users can input sequences via text or upload FASTA files for analysis.',
     [
-      'Local and global sequence alignment algorithms',
-      'Dynamic programming optimization',
-      'Interactive visualization of alignment matrices',
-      'Support for DNA and protein sequences'
+      'Global and local sequence alignment',
+      'FASTA file upload support',
+      'Containerized Python backend',
+      'Interactive web interface'
+    ]
+  ),
+  createProject(
+    'Multiple Sequence Alignment Tool',
+    'WebApp for Multiple Sequence Alignment using FitchMargoliash, Feng Doolittle, and Sum of Pairs algorithms',
+    'Python, React, Bioinformatics, MSA',
+    '',
+    'https://github.com/joshduplaa/MultipleSequenceAlignmentTool',
+    'A comprehensive multiple sequence alignment tool implementing multiple algorithms including Fitch-Margoliash, Feng-Doolittle, and Sum of Pairs methods for phylogenetic analysis.',
+    [
+      'Multiple alignment algorithms',
+      'Phylogenetic tree construction',
+      'Interactive web interface',
+      'Sequence visualization'
+    ]
+  ),
+  createProject(
+    'The Red Raider Skater (Video Classification Model)',
+    'Neural network model for skateboard trick classification using video analysis',
+    'Python, TensorFlow, OpenCV, CNN',
+    '',
+    'https://github.com/joshduplaa/RedRaiderSkater',
+    'A deep learning model designed to classify skateboard tricks from video footage. The model uses convolutional neural networks to analyze video frames and identify specific skateboarding maneuvers.',
+    [
+      'Real-time video processing',
+      'CNN architecture for action recognition',
+      'Skateboard trick classification',
+      'Jupyter notebook interface'
+    ]
+  ),
+  createProject(
+    'Image Classification Neural Network',
+    'Neural network model for image classification tasks',
+    'Python, TensorFlow, CNN, Image Processing',
+    '',
+    '',
+    'A convolutional neural network model designed for image classification tasks. The model can be trained on custom datasets and used for various computer vision applications.',
+    [
+      'Custom CNN architecture',
+      'Image preprocessing pipeline',
+      'Transfer learning capabilities',
+      'Model training and evaluation'
+    ]
+  ),
+  createProject(
+    'Fluid Boundary Approximator (Least Squares Project)',
+    'Least squares line approximation of a set of points using MatLab and Numerical Analysis techniques',
+    'MATLAB, Numerical Analysis, Least Squares',
+    '',
+    'https://github.com/joshduplaa/fluid-boundaryApp',
+    'A MATLAB implementation of least squares approximation for fluid boundary analysis. The project demonstrates numerical analysis techniques for approximating complex boundaries from discrete data points.',
+    [
+      'Least squares approximation',
+      'Numerical analysis methods',
+      'MATLAB implementation',
+      'Fluid dynamics applications'
+    ]
+  ),
+  createProject(
+    'MultiProcessed Conway\'s Game of Life',
+    'MultiProcessed Conway\'s game of life with "wrap around" condition written in Python using GIL',
+    'Python, Multiprocessing, GIL, Cellular Automata',
+    '',
+    'https://github.com/joshduplaa/FinalConcepts',
+    'An optimized implementation of Conway\'s Game of Life using Python multiprocessing. Features wrap-around boundary conditions and efficient parallel computation using the Global Interpreter Lock (GIL).',
+    [
+      'Multiprocessing implementation',
+      'Wrap-around boundary conditions',
+      'GIL optimization',
+      'Cellular automata simulation'
+    ]
+  ),
+  createProject(
+    'MIS Website',
+    'Full stack Application built with React/TypeScript frontend and .NET/C# backend for the Molecular Information Simulations laboratory at TTU HSC',
+    'React, TypeScript, .NET, C#, Full Stack',
+    'https://scrumdumpstersmis.web.app/',
+    'https://github.com/joshduplaa/medical_information_simulation',
+    'A comprehensive full-stack web application developed for the Molecular Information Simulations laboratory at Texas Tech University Health Sciences Center. Built collaboratively with a team using modern web technologies.',
+    [
+      'React/TypeScript frontend',
+      '.NET/C# backend',
+      'Team collaboration',
+      'Laboratory management system'
+    ]
+  ),
+  createProject(
+    'National Representation Platform',
+    'Unique Social Media platform centered on public evaluation of user-posted ideas for changes in local and federal government',
+    'React, Social Media, Government, Civic Tech',
+    '',
+    'https://github.com/joshduplaa/National-Representation',
+    'An innovative social media platform designed to facilitate civic engagement by allowing users to post and evaluate ideas for government policy changes at both local and federal levels.',
+    [
+      'Civic engagement platform',
+      'Idea evaluation system',
+      'Government policy focus',
+      'Social media features'
+    ]
+  ),
+  createProject(
+    'ATmega Asteroids Game',
+    'Flappy bird style game on ATmega328P using LCD display, buttons, and EEPROM with increasing difficulty and high score saving',
+    'C, ATmega328P, Embedded Systems, LCD',
+    '',
+    'https://github.com/joshduplaa/AVR-Microcontroller-Asteroids-Game',
+    'An embedded systems project implementing a Flappy Bird-style game on the ATmega328P microcontroller. Features include LCD display, button controls, EEPROM for high score storage, and progressive difficulty.',
+    [
+      'ATmega328P microcontroller',
+      'LCD display interface',
+      'EEPROM data storage',
+      'Progressive difficulty system'
+    ]
+  ),
+  createProject(
+    'Lottery Project',
+    'A Lottery webapp built for SWE (Software Engineering) course',
+    'React, Web Development, SWE',
+    'https://swelotteryproject.web.app/',
+    'https://github.com/joshduplaa/SWE_Lottery_Project?tab=GPL-3.0-1-ov-file',
+    'A web application developed for a Software Engineering course project. The lottery system demonstrates web development principles and user interface design.',
+    [
+      'Web application development',
+      'User interface design',
+      'Software engineering principles',
+      'Interactive lottery system'
     ]
   ),
   createProject(
     'Portfolio Website',
-    'Personal portfolio website with dark/light theme and responsive design',
+    'Personal portfolio website showcasing projects and skills with modern design and responsive layout',
     'React, TypeScript, MUI, Next.js',
-    'https://joshua-duplaa-portfolio.vercel.app',
-    'https://github.com/joshduplaa/portfolio-website',
-    'A modern, responsive portfolio website built with React and TypeScript. Features include dark/light theme toggle, particle background effects, and mobile-responsive design.',
+    '',
+    'https://github.com/joshduplaa/JoshuaDuplaaPortfolioWebsite',
+    'A modern, responsive portfolio website built with React, TypeScript, and Material-UI. Features include dark/light theme toggle, particle background effects, and mobile-responsive design.',
     [
       'Dark/light theme switching',
       'Particle background animations',
       'Mobile-responsive design',
       'Interactive project showcase'
-    ]
-  ),
-  createProject(
-    'Data Visualization Dashboard',
-    'Interactive dashboard for analyzing and visualizing complex datasets',
-    'React, D3.js, TypeScript, Express',
-    'https://data-viz-dashboard.vercel.app',
-    'https://github.com/joshduplaa/data-viz-dashboard',
-    'An interactive data visualization dashboard that allows users to explore and analyze complex datasets through various chart types and filtering options.',
-    [
-      'Multiple chart types (bar, line, scatter, heatmap)',
-      'Real-time data filtering and sorting',
-      'Export functionality for reports',
-      'Responsive design for all devices'
     ]
   )
 ];

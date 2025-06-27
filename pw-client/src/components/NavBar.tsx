@@ -20,8 +20,8 @@ export default function NavBar() {
       sx={{ 
         backgroundColor: "transparent !important", 
         boxShadow: 'none !important', 
-        width: '100%',
-        position: 'relative',
+      width: '100%',
+      position: 'relative',
         zIndex: 3,
         backgroundImage: 'none !important'
       }}

@@ -9,7 +9,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useTheme } from './MuiThemeProvider';
@@ -98,11 +97,41 @@ function Row(props: { row: ReturnType<typeof createData> }) {
   );
 }
 const rows = [
-  createData('Data Analyst', 'TTU IMSE', 'October 2023', 'January 2025', 'Analyzed and visualized data to support industrial engineering research.'),
-  createData('DevOps Engineer Intern II', 'ResMed', 'May 2024', 'August 2024', 'Worked on CI/CD pipelines and cloud infrastructure improvements.'),
-  createData('DevOps Engineer Intern', 'ResMed', 'June 2023', 'September 2023', 'Automated deployment processes and enhanced system monitoring.'),
-  createData('Learning Assistant', 'TTU TLPDC', 'August 2022', 'January 2023', 'Assisted students with coursework and facilitated active learning sessions.'),
-  createData('UG Research Assistant', 'TTU AVL', 'August 2022', 'January 2023','Assisted in data collection for researchers working on an image recognition network to count cotton in real time.' )
+  createData(
+    'Data Analyst',
+    'Texas Tech IMSE',
+    'October 2023',
+    'January 2025',
+    'Student Assistant position where I developed and maintained 15+ interactive PowerBI dashboards for the IMSE department and the TTU COE. Built out data models and ETL pipelines to visualize and transform data from MS SQL databases and Excel using Python, DAX, and PowerBI. Aided in data comprehension and communication, standardizing data procedures and creating data models relating to the office environment and department expenses/revenue.'
+  ),
+  createData(
+    'DevOps Engineer Intern II',
+    'ResMed',
+    'May 2024',
+    'August 2024',
+    'Built a distributed Kubernetes training environment for co-workers using Azure DevOps Pipelines and AKS (Azure Kubernetes Service). Monitored and maintained cloud infrastructure on both AWS and Azure. On the frontlines during the CrowdStrike outage which caused widespread Windows Machine failures; manually recovered over 25 servers and helped develop an automated solution to recover the rest of the network. Continued working with containerization technologies, CI/CD pipelines, and cloud monitoring.'
+  ),
+  createData(
+    'DevOps Engineer Intern',
+    'ResMed',
+    'June 2023',
+    'September 2023',
+    'Automated infrastructure configuration and deployment for skilled nursing facilities (SNF) servers using Ansible playbooks, Terraform, Python, Linux, virtualization, Bash, Batch, and Powershell scripting. Introduced to building CI/CD pipelines for Azure and AWS infrastructure using Terraform. Developed understanding of TCP/IP networking, IP routing, and core technologies such as Load Balancers, Firewalls, ACLs, DNS, and associated Cloud resources. Placed 2nd in a company-sponsored cybersecurity Hackathon (CyberRange).' 
+  ),
+  createData(
+    'Undergraduate Research Assistant',
+    'Texas Tech ECE',
+    'August 2022',
+    'January 2023',
+    'Undergraduate research assistant for the Applied Vision Laboratory (AVL) at Texas Tech. Responsible for collecting and segmenting 100+ hours of footage as test data and comparing it against the results from the lab\'s image processing machine learning model.'
+  ),
+  createData(
+    'Calculus II Tutor',
+    'Texas Tech TLPDC',
+    'August 2022',
+    'January 2023',
+    'Tutored students in Calculus II, helping them understand complex mathematical concepts and improve academic performance.'
+  )
 ];
 export default function CollapsibleTable() {
   const { isDarkMode } = useTheme();

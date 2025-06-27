@@ -88,9 +88,9 @@ export default function MuiThemeProvider({ children }: { children: React.ReactNo
 
   return (
     <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
-      <ThemeProvider theme={theme}>
-        {children}
-      </ThemeProvider>
+    <ThemeProvider theme={theme}>
+            {children}
+        </ThemeProvider>
     </ThemeContext.Provider>
   );
 }
