@@ -162,9 +162,9 @@ const projects = [
     'BioInformatics Pipeline',
     'A pipeline that gathers and sorts sequences of DNA or Protein, finds representative sequences and builds clusters, filters out chimeric sequences, and performs multiple sequence alignment on non-chimeric sequences',
     'Python, Bioinformatics, Sequence Analysis',
-    '',
-    'https://github.com/joshduplaa/Bioinformatics-Pipeline',
-    'A comprehensive bioinformatics pipeline for DNA and protein sequence analysis. The pipeline processes raw sequence data through multiple stages including clustering, chimeric sequence detection, and multiple sequence alignment.',
+    'endpoint', /*deployment backend endpoint*/
+    'https://github.com/joshduplaa/Bioinformatics-Pipeline', /*github link*/
+    'A comprehensive bioinformatics pipeline for DNA and protein chimera detection and sequence analysis. The pipeline processes raw sequence data through multiple stages including clustering, chimeric sequence detection, and multiple sequence alignment. Utility functions from my previous Needleman Wunsch, Smith Waterman, and MSA implementations',
     [
       'DNA and protein sequence processing',
       'Representative sequence clustering',
