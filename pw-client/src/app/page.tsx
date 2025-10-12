@@ -25,11 +25,12 @@ export default function Home() {
         <div className='introPic'> 
           <div>
             <div id='profilePic' style={{ borderColor: borderColor }}>
-              <img src="/portfolioPic3.png" alt="Joshua Duplaa Profile Picture"/>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://i.imgur.com/fP5IYuB.png" alt="Joshua Duplaa Profile Picture"/>
             </div>
           </div>
           <div id='proTitle'>
-            <p>Texas Tech University '25<br/>B.S. Computer Science<br/>B.S. Mathematics</p>
+            <p>Texas Tech University &apos;25<br/>B.S. Computer Science<br/>B.S. Mathematics</p>
           </div>    
           <div id='socialIcons'>
             <a className='iconLink' href='https://github.com/joshduplaa' target='_blank' rel='noopener noreferrer'><GitHubIcon sx={{ color: textColor }}/></a> <a className='iconLink' href='https://www.linkedin.com/in/joshua-duplaa-487502178/' target='_blank' rel='noopener noreferrer'><LinkedInIcon sx={{ color: textColor }}/></a> <a className='iconLink' href='https://leetcode.com/joshduplaa/' target='_blank' rel='noopener noreferrer'><CodeIcon sx={{ color: textColor }}/></a> 
