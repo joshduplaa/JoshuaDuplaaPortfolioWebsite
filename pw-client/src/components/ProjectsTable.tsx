@@ -98,9 +98,11 @@ function ProjectRow(props: { project: ReturnType<typeof createProject> }) {
               <Button
                 size="small"
                 startIcon={<LaunchIcon />}
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={async () => {
+                  const res = await fetch("/api/launch-env", { method: "POST" });
+                  const text = await res.text();
+                  alert(text);
+                }}
                 sx={{
                   color: textColor,
                   borderColor: textColor,
