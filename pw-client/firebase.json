@@ -8,6 +8,15 @@
     ],
     "frameworksBackend": {
       "region": "us-east1"
-    }
+    },
+    "rewrites": [
+      {
+        "source": "/api/**",
+        "run": {
+          "serviceId": "backend",
+          "region": "us-central1"
+        }
+      }
+    ]
   }
 }
