@@ -9,6 +9,9 @@ app.post("/launch-env", (req, res) => {
     res.send(stdout);
   });
 });
+app.get('/', (req, res) => {
+  res.send('Backend is running successfully!');
+});
 
 const PORT = process.env.PORT || 8080; // <- use Cloud Run's PORT
 app.listen(PORT, "0.0.0.0", () => {
