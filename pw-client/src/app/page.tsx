@@ -45,7 +45,7 @@ export default function Home() {
               <Button
                 variant="outlined"
                 color="success"
-                href="/Joshua_Duplaa_Resume_2025_Portfolio.pdf"
+                href="/Joshua_Duplaa_Resume_2025.pdf"
                 download="JoshuaDuplaa_Resume.pdf"
                 sx={{
                   fontWeight: '900',

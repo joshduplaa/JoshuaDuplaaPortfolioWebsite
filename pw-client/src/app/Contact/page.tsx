@@ -47,10 +47,10 @@ export default function Contact() {
     },
     {
       title: 'Location',
-      value: 'Lubbock, TX',
+      value: 'Seattle, WA',
       icon: <LocationOnIcon sx={{ fontSize: 40, color: iconColor }} />,
       link: null,
-      description: 'Based in Lubbock, Texas. Open to remote opportunities and collaborations.'
+      description: 'Based in Seattle, WA. Open to remote opportunities and collaborations.'
     },
     {
       title: 'Phone',
