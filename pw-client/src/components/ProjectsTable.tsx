@@ -99,7 +99,7 @@ function ProjectRow(props: { project: ReturnType<typeof createProject> }) {
                 size="small"
                 startIcon={<LaunchIcon />}
                 onClick={async () => {
-                  const res = await fetch("/api/launch-env", { method: "POST" });
+                  const res = await fetch("/api/launch-demo", { method: "POST" });
                   const text = await res.text();
                   alert(text);
                 }}

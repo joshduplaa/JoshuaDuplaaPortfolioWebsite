@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 
-export async function POST(req: Request) {
-  const body = await req.json();
+export async function POST() {
+  //call microservice / ECS / orchestrator / whatever
+  return new Response("API route works!", { status: 200 });
 
-  // call your controller-caller or orchestration function here
-  return NextResponse.json({ ok: true, received: body });
+  //return NextResponse.json({ message: "Demo starting..." });
 }
