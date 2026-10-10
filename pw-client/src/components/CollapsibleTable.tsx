@@ -98,6 +98,13 @@ function Row(props: { row: ReturnType<typeof createData> }) {
 }
 const rows = [
   createData(
+    'Software Engineer',
+    'Mercor',
+    'February 2026',
+    'Present',
+    'Develop solutions for SWE-bench style software engineering tasks used to evaluate AI coding agents, debugging real-world repositories and implementing fixes under strict test constraints.'
+  ),
+  createData(
     'Data Analyst',
     'Texas Tech IMSE',
     'October 2023',

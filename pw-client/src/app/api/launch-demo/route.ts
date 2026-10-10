@@ -1,4 +1,3 @@
-import { NextResponse } from "next/server";
 
 export async function POST() {
   //call microservice / ECS / orchestrator / whatever
