@@ -29,7 +29,7 @@ export default function Home() {
               <img src="https://i.imgur.com/fP5IYuB.png" alt="Joshua Duplaa Profile Picture"/>
             </div>
           </div>
-          <div id='proTitle'>
+          <div id='proTitle' style={{ color: textColor }}>
             <p>Texas Tech University &apos;25<br/>B.S. Computer Science<br/>B.S. Mathematics</p>
           </div>    
           <div id='socialIcons'>

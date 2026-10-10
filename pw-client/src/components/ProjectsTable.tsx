@@ -94,15 +94,13 @@ function ProjectRow(props: { project: ReturnType<typeof createProject> }) {
                 Code
               </Button>
             )}
-            {project.demo && (
+            {project.demo.startsWith('http') && (
               <Button
                 size="small"
                 startIcon={<LaunchIcon />}
-                onClick={async () => {
-                  const res = await fetch("/api/launch-demo", { method: "POST" });
-                  const text = await res.text();
-                  alert(text);
-                }}
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{
                   color: textColor,
                   borderColor: textColor,
@@ -249,7 +247,7 @@ const projects = [
     'MultiProcessed Conway\'s game of life with "wrap around" condition written in Python using GIL',
     'Python, Multiprocessing, GIL, Cellular Automata',
     '',
-    'https://github.com/joshduplaa/FinalConcepts',
+    '', /* FinalConcepts repo is private */
     'An optimized implementation of Conway\'s Game of Life using Python multiprocessing. Features wrap-around boundary conditions and efficient parallel computation using the Global Interpreter Lock (GIL).',
     [
       'Multiprocessing implementation',
