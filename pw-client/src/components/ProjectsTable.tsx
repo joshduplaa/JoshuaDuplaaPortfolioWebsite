@@ -12,6 +12,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useTheme } from './MuiThemeProvider';
 
 function createProject(
@@ -43,7 +45,7 @@ function ProjectRow(props: { project: ReturnType<typeof createProject> }) {
             onClick={() => setOpen(!open)}
             sx={{ color: textColor }}
           >
-            {open ? <LaunchIcon /> : <LaunchIcon />}
+            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
         <TableCell component="th" scope="row" sx={{ 
@@ -162,8 +164,8 @@ const projects = [
     'BioInformatics Pipeline',
     'A pipeline that gathers and sorts sequences of DNA or Protein, finds representative sequences and builds clusters, filters out chimeric sequences, and performs multiple sequence alignment on non-chimeric sequences',
     'Python, Bioinformatics, Sequence Analysis',
-    'endpoint', /*deployment backend endpoint*/
-    'https://github.com/joshduplaa/Bioinformatics-Pipeline', /*github link*/
+    '',
+    'https://github.com/joshduplaa/Bioinformatics-Pipeline',
     'A comprehensive bioinformatics pipeline for DNA and protein chimera detection and sequence analysis. The pipeline processes raw sequence data through multiple stages including clustering, chimeric sequence detection, and multiple sequence alignment. Utility functions from my previous Needleman Wunsch, Smith Waterman, and MSA implementations',
     [
       'DNA and protein sequence processing',
@@ -231,15 +233,15 @@ const projects = [
   createProject(
     'Fluid Boundary Approximator (Least Squares Project)',
     'Least squares line approximation of a set of points using MatLab and Numerical Analysis techniques',
-    'MATLAB, Numerical Analysis, Least Squares',
-    '',
+    'MATLAB, JavaScript, Numerical Analysis, Least Squares',
+    'https://joshduplaa.github.io/fluid-boundaryApp/',
     'https://github.com/joshduplaa/fluid-boundaryApp',
-    'A MATLAB implementation of least squares approximation for fluid boundary analysis. The project demonstrates numerical analysis techniques for approximating complex boundaries from discrete data points.',
+    'A MATLAB implementation of least squares approximation for fluid boundary analysis, with an interactive web demo. The project demonstrates numerical analysis techniques for approximating complex boundaries from discrete data points.',
     [
       'Least squares approximation',
       'Numerical analysis methods',
       'MATLAB implementation',
-      'Fluid dynamics applications'
+      'Interactive web demo with a JavaScript port of the fits'
     ]
   ),
   createProject(
@@ -303,7 +305,7 @@ const projects = [
     'A Lottery webapp built for SWE (Software Engineering) course',
     'React, Web Development, SWE',
     'https://swelotteryproject.web.app/',
-    'https://github.com/joshduplaa/SWE_Lottery_Project?tab=GPL-3.0-1-ov-file',
+    'https://github.com/joshduplaa/SWE_Lottery_Project',
     'A web application developed for a Software Engineering course project. The lottery system demonstrates web development principles and user interface design.',
     [
       'Web application development',
