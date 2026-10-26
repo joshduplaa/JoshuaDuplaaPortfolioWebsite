@@ -24,6 +24,19 @@ function createData(
   return { Title, Company, Start, End, description };
 }
 
+// Put month and year on separate lines on mobile so every date stacks the same way,
+// whether or not it is long enough to wrap on its own.
+function StackedDate(props: { date: string }) {
+  const [month, year] = props.date.split(' ');
+  return (
+    <>
+      {month}
+      <Box component="br" sx={{ display: { xs: 'inline', sm: 'none' } }} />
+      {' '}{year}
+    </>
+  );
+}
+
 function Row(props: { row: ReturnType<typeof createData> }) {
   const { row } = props;
   const [open, setOpen] = React.useState(false);
@@ -63,14 +76,14 @@ function Row(props: { row: ReturnType<typeof createData> }) {
           fontSize: { xs: '0.875rem', sm: '1rem' },
           padding: { xs: '8px 4px', sm: '16px' }
         }}>
-          {row.Start}
+          <StackedDate date={row.Start} />
         </TableCell>
         <TableCell align="right" sx={{ 
           color: textColor,
           fontSize: { xs: '0.875rem', sm: '1rem' },
           padding: { xs: '8px 4px', sm: '16px' }
         }}>
-          {row.End}
+          <StackedDate date={row.End} />
         </TableCell>
       </TableRow>
       <TableRow>
