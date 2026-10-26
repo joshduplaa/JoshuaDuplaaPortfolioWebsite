@@ -161,6 +161,20 @@ function ProjectRow(props: { project: ReturnType<typeof createProject> }) {
 
 const projects = [
   createProject(
+    'Seattle Neighborhood Pulse',
+    'Interactive civic dashboard exploring what Seattle residents report to the City: where requests concentrate, which neighborhoods report the most, and how volume changes over time',
+    'Next.js, TypeScript, MapLibre, Recharts, Vitest',
+    'https://seattle-neighborhood-pulse.vercel.app',
+    'https://github.com/joshduplaa/seattle-neighborhood-pulse',
+    'A dashboard built on the City of Seattle\'s Customer Service Requests open dataset (about 2.5 million requests, refreshed daily). Every number is queried live from the Socrata API, with server-side aggregation and caching, and every filter lives in the URL so any view can be shared. Built as an exercise in agentic development with Claude Code.',
+    [
+      'Map with neighborhood shading, a density heatmap and clustered request markers',
+      'Filters by date, request type, status, neighborhood and council district',
+      'Per-capita neighborhood comparisons and period-over-period change',
+      'Trend charts and response times for the request types the City tracks'
+    ]
+  ),
+  createProject(
     'BioInformatics Pipeline',
     'A pipeline that gathers and sorts sequences of DNA or Protein, finds representative sequences and builds clusters, filters out chimeric sequences, and performs multiple sequence alignment on non-chimeric sequences',
     'Python, Bioinformatics, Sequence Analysis',
