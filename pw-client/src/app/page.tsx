@@ -40,7 +40,7 @@ export default function Home() {
           <div id = "helloDiv">
             <h1 className="greeting-text" style={{ color: textColor, fontSize: '2.5rem', fontWeight: 'bold' }}>Hi &#128075; I&apos;m Joshua Duplaa</h1>
           </div>
-          <p style={{ color: textColor }}> I&apos;m a Data Scientist and DevOps engineer</p>
+          <p style={{ color: textColor }}> I&apos;m a Software Engineer working across AI coding agents, cloud infrastructure, and data</p>
           <div id = "resume">
               <Button
                 variant="outlined"
