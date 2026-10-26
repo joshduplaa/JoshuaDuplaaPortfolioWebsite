@@ -101,36 +101,36 @@ const rows = [
     'Software Engineer',
     'Mercor',
     'February 2026',
-    'Present',
-    'Develop solutions for SWE-bench style software engineering tasks used to evaluate AI coding agents, debugging real-world repositories and implementing fixes under strict test constraints.'
-  ),
-  createData(
-    'Data Analyst',
-    'Texas Tech IMSE',
-    'October 2023',
-    'January 2025',
-    'Student Assistant position where I developed and maintained 15+ interactive PowerBI dashboards for the IMSE department and the TTU COE. Built out data models and ETL pipelines to visualize and transform data from MS SQL databases and Excel using Python, DAX, and PowerBI. Aided in data comprehension and communication, standardizing data procedures and creating data models relating to the office environment and department expenses/revenue.'
+    'July 2026',
+    'Contract role orchestrating agentic coding workflows with Claude Code to reproduce, diagnose, and fix issues across unfamiliar repositories, reviewing agent-generated patches for correctness, regressions, and test coverage before submission. Developed 135+ Python coding problems, reference solutions, and test suites across 25 repositories to train AI coding models, earning a 99%+ quality rating; these were written without AI assistance using official documentation. Evaluated AI-generated code and documented actionable feedback on correctness, architecture, edge cases, and regressions, and annotated code and images for reinforcement learning pipelines using detailed rubrics.'
   ),
   createData(
     'DevOps Engineer Intern II',
     'ResMed',
     'May 2024',
     'August 2024',
-    'Built a distributed Kubernetes training environment for co-workers using Azure DevOps Pipelines and AKS (Azure Kubernetes Service). Monitored and maintained cloud infrastructure on both AWS and Azure. On the frontlines during the CrowdStrike outage which caused widespread Windows Machine failures; manually recovered over 25 servers and helped develop an automated solution to recover the rest of the network. Continued working with containerization technologies, CI/CD pipelines, and cloud monitoring.'
+    'Restored 25+ Windows servers during the global CrowdStrike SEV-1 outage and helped automate recovery for the remaining fleet, reducing downtime. Monitored production multi-cloud infrastructure across AWS and Azure, using Azure Monitor and Kusto (KQL) to diagnose incidents and improve service reliability. Built a self-service Kubernetes training platform on AKS with a supporting API, Azure DevOps pipelines, RBAC, and documentation, streamlining onboarding and cluster deployments for a 12-person team.'
+  ),
+  createData(
+    'Data Analyst',
+    'Texas Tech IMSE',
+    'October 2023',
+    'January 2025',
+    'Built and maintained 15+ Power BI dashboards for the IMSE department and the College of Engineering, triaging report requests from non-technical staff and sending regular status updates. Designed and standardized data pipelines in Python, Pandas, SQL, and DAX, turning ad hoc reporting into repeatable, validated workflows.'
   ),
   createData(
     'DevOps Engineer Intern',
     'ResMed',
     'June 2023',
     'September 2023',
-    'Automated infrastructure configuration and deployment for skilled nursing facilities (SNF) servers using Ansible playbooks, Terraform, Python, Linux, virtualization, Bash, Batch, and Powershell scripting. Introduced to building CI/CD pipelines for Azure and AWS infrastructure using Terraform. Developed understanding of TCP/IP networking, IP routing, and core technologies such as Load Balancers, Firewalls, ACLs, DNS, and associated Cloud resources. Placed 2nd in a company-sponsored cybersecurity Hackathon (CyberRange).' 
+    'Automated HIPAA-compliant Skilled Nursing Facility (SNF) server deployments and patching with Ansible and Terraform, making deployments consistent and repeatable as infrastructure as code. Built YAML CI/CD pipelines in Azure DevOps to test, version, and deploy Terraform infrastructure as code. Placed 2nd in a company-sponsored cybersecurity Hackathon (CyberRange).'
   ),
   createData(
     'Undergraduate Research Assistant',
-    'Texas Tech ECE',
+    'Texas Tech Applied Vision Laboratory',
     'August 2022',
     'January 2023',
-    'Undergraduate research assistant for the Applied Vision Laboratory (AVL) at Texas Tech. Responsible for collecting and segmenting 100+ hours of footage as test data and comparing it against the results from the lab\'s image processing machine learning model.'
+    'Built Python data pipelines to collect, segment, and preprocess 100+ hours of video for evaluating real-time computer vision models. Contributed to the development and evaluation of Mask R-CNN models in PyTorch, analyzing model performance on real-world video data.'
   ),
   createData(
     'Calculus II Tutor',
