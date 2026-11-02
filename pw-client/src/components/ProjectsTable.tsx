@@ -28,7 +28,7 @@ function createProject(
   return { name, description, tech, demo, github, detailedDescription, features };
 }
 
-function ProjectRow(props: { project: ReturnType<typeof createProject> }) {
+function ProjectRow(props: { project: Project }) {
   const { project } = props;
   const [open, setOpen] = React.useState(false);
   const { isDarkMode } = useTheme();
@@ -159,7 +159,10 @@ function ProjectRow(props: { project: ReturnType<typeof createProject> }) {
   );
 }
 
-const projects = [
+type Project = ReturnType<typeof createProject>;
+
+// Shown first on the Projects page: the strongest work for software engineering and forward deployed roles.
+export const featuredProjects: Project[] = [
   createProject(
     'Seattle Neighborhood Pulse',
     'Interactive civic dashboard exploring what Seattle residents report to the City: where requests concentrate, which neighborhoods report the most, and how volume changes over time',
@@ -175,17 +178,31 @@ const projects = [
     ]
   ),
   createProject(
-    'BioInformatics Pipeline',
-    'A pipeline that gathers and sorts sequences of DNA or Protein, finds representative sequences and builds clusters, filters out chimeric sequences, and performs multiple sequence alignment on non-chimeric sequences',
-    'Python, Bioinformatics, Sequence Analysis',
+    'Daily Job Watcher',
+    'Automated job-search pipeline that checks 70 company job boards and careers sites every two hours, scores each posting against my background, and sends new matches to my phone, my inbox and a Google Sheet',
+    'Python, asyncio, httpx, GitHub Actions, Google Sheets API, pytest',
     '',
-    'https://github.com/joshduplaa/Bioinformatics-Pipeline',
-    'A comprehensive bioinformatics pipeline for DNA and protein chimera detection and sequence analysis. The pipeline processes raw sequence data through multiple stages including clustering, chimeric sequence detection, and multiple sequence alignment. Utility functions from my previous Needleman Wunsch, Smith Waterman, and MSA implementations',
+    '', /* private repository */
+    'A scheduled service on GitHub Actions with no server to run. Adapters read Greenhouse, Ashby, Lever, Workday, Workable and amazon.jobs, plus the Microsoft, Google and Apple careers sites, and turn every posting into a common record. A configurable filter rejects out-of-scope titles and locations, parses pay and required years of experience, and scores what remains. New matches go out as a push notification and an email digest and are logged to a Google Sheet for tracking applications. When a dry run showed that most sources hired outside Seattle, I added Seattle-area and remote-friendly employers, which raised current matches from 210 to 380. The repository is private; I\'m happy to walk through it.',
     [
-      'DNA and protein sequence processing',
-      'Representative sequence clustering',
-      'Chimeric sequence filtering',
-      'Multiple sequence alignment (MSA)'
+      '70 sources across six job-board APIs and three careers sites, with retries, rate limiting and robots.txt limits',
+      'Rules for titles, locations, pay and experience kept in YAML, so tuning needs no code changes',
+      'Health alerts when a source breaks, sent once per breakage instead of on every run',
+      '294 tests run against recorded API responses, with no live network calls'
+    ]
+  ),
+  createProject(
+    'MIS Website',
+    'Full stack Application built with React/TypeScript frontend and .NET/C# backend for the Molecular Information Simulations laboratory at TTU HSC',
+    'React, TypeScript, .NET, C#, Full Stack',
+    'https://scrumdumpstersmis.web.app/',
+    'https://github.com/joshduplaa/medical_information_simulation',
+    'A comprehensive full-stack web application developed for the Molecular Information Simulations laboratory at Texas Tech University Health Sciences Center. Built collaboratively with a team using modern web technologies.',
+    [
+      'React/TypeScript frontend',
+      '.NET/C# backend',
+      'Team collaboration',
+      'Laboratory management system'
     ]
   ),
   createProject(
@@ -203,17 +220,17 @@ const projects = [
     ]
   ),
   createProject(
-    'Multiple Sequence Alignment Tool',
-    'WebApp for Multiple Sequence Alignment using FitchMargoliash, Feng Doolittle, and Sum of Pairs algorithms',
-    'Python, React, Bioinformatics, MSA',
+    'BioInformatics Pipeline',
+    'A pipeline that gathers and sorts sequences of DNA or Protein, finds representative sequences and builds clusters, filters out chimeric sequences, and performs multiple sequence alignment on non-chimeric sequences',
+    'Python, Bioinformatics, Sequence Analysis',
     '',
-    'https://github.com/joshduplaa/MultipleSequenceAlignmentTool',
-    'A comprehensive multiple sequence alignment tool implementing multiple algorithms including Fitch-Margoliash, Feng-Doolittle, and Sum of Pairs methods for phylogenetic analysis.',
+    'https://github.com/joshduplaa/Bioinformatics-Pipeline',
+    'A comprehensive bioinformatics pipeline for DNA and protein chimera detection and sequence analysis. The pipeline processes raw sequence data through multiple stages including clustering, chimeric sequence detection, and multiple sequence alignment. Utility functions from my previous Needleman Wunsch, Smith Waterman, and MSA implementations',
     [
-      'Multiple alignment algorithms',
-      'Phylogenetic tree construction',
-      'Interactive web interface',
-      'Sequence visualization'
+      'DNA and protein sequence processing',
+      'Representative sequence clustering',
+      'Chimeric sequence filtering',
+      'Multiple sequence alignment (MSA)'
     ]
   ),
   createProject(
@@ -229,19 +246,23 @@ const projects = [
       'Skateboard trick classification',
       'Jupyter notebook interface'
     ]
-  ),
+  )
+];
+
+// Coursework and earlier projects, shown below the featured ones.
+export const earlierProjects: Project[] = [
   createProject(
-    'Image Classification Neural Network',
-    'Neural network model for image classification tasks',
-    'Python, TensorFlow, CNN, Image Processing',
+    'Multiple Sequence Alignment Tool',
+    'WebApp for Multiple Sequence Alignment using FitchMargoliash, Feng Doolittle, and Sum of Pairs algorithms',
+    'Python, React, Bioinformatics, MSA',
     '',
-    '',
-    'A convolutional neural network model designed for image classification tasks. The model can be trained on custom datasets and used for various computer vision applications.',
+    'https://github.com/joshduplaa/MultipleSequenceAlignmentTool',
+    'A comprehensive multiple sequence alignment tool implementing multiple algorithms including Fitch-Margoliash, Feng-Doolittle, and Sum of Pairs methods for phylogenetic analysis.',
     [
-      'Custom CNN architecture',
-      'Image preprocessing pipeline',
-      'Transfer learning capabilities',
-      'Model training and evaluation'
+      'Multiple alignment algorithms',
+      'Phylogenetic tree construction',
+      'Interactive web interface',
+      'Sequence visualization'
     ]
   ),
   createProject(
@@ -260,44 +281,16 @@ const projects = [
   ),
   createProject(
     'MultiProcessed Conway\'s Game of Life',
-    'MultiProcessed Conway\'s game of life with "wrap around" condition written in Python using GIL',
-    'Python, Multiprocessing, GIL, Cellular Automata',
+    'Conway\'s Game of Life with wrap-around edges, parallelized with Python multiprocessing',
+    'Python, Multiprocessing, Cellular Automata',
     '',
     '', /* FinalConcepts repo is private */
-    'An optimized implementation of Conway\'s Game of Life using Python multiprocessing. Features wrap-around boundary conditions and efficient parallel computation using the Global Interpreter Lock (GIL).',
+    'An implementation of Conway\'s Game of Life with wrap-around boundary conditions. The grid is split across worker processes with Python\'s multiprocessing module, which sidesteps the Global Interpreter Lock (GIL) so the simulation runs on multiple cores.',
     [
-      'Multiprocessing implementation',
+      'Grid split across worker processes',
       'Wrap-around boundary conditions',
-      'GIL optimization',
+      'Runs on multiple cores despite the GIL',
       'Cellular automata simulation'
-    ]
-  ),
-  createProject(
-    'MIS Website',
-    'Full stack Application built with React/TypeScript frontend and .NET/C# backend for the Molecular Information Simulations laboratory at TTU HSC',
-    'React, TypeScript, .NET, C#, Full Stack',
-    'https://scrumdumpstersmis.web.app/',
-    'https://github.com/joshduplaa/medical_information_simulation',
-    'A comprehensive full-stack web application developed for the Molecular Information Simulations laboratory at Texas Tech University Health Sciences Center. Built collaboratively with a team using modern web technologies.',
-    [
-      'React/TypeScript frontend',
-      '.NET/C# backend',
-      'Team collaboration',
-      'Laboratory management system'
-    ]
-  ),
-  createProject(
-    'National Representation Platform',
-    'Unique Social Media platform centered on public evaluation of user-posted ideas for changes in local and federal government',
-    'React, Social Media, Government, Civic Tech',
-    '',
-    'https://github.com/joshduplaa/National-Representation',
-    'An innovative social media platform designed to facilitate civic engagement by allowing users to post and evaluate ideas for government policy changes at both local and federal levels.',
-    [
-      'Civic engagement platform',
-      'Idea evaluation system',
-      'Government policy focus',
-      'Social media features'
     ]
   ),
   createProject(
@@ -329,6 +322,20 @@ const projects = [
     ]
   ),
   createProject(
+    'National Representation Platform',
+    'Unique Social Media platform centered on public evaluation of user-posted ideas for changes in local and federal government',
+    'React, Social Media, Government, Civic Tech',
+    '',
+    'https://github.com/joshduplaa/National-Representation',
+    'An innovative social media platform designed to facilitate civic engagement by allowing users to post and evaluate ideas for government policy changes at both local and federal levels.',
+    [
+      'Civic engagement platform',
+      'Idea evaluation system',
+      'Government policy focus',
+      'Social media features'
+    ]
+  ),
+  createProject(
     'Portfolio Website',
     'Personal portfolio website showcasing projects and skills with modern design and responsive layout',
     'React, TypeScript, MUI, Next.js',
@@ -344,7 +351,7 @@ const projects = [
   )
 ];
 
-export default function ProjectsTable() {
+export default function ProjectsTable(props: { projects: Project[] }) {
   const { isDarkMode } = useTheme();
   const textColor = isDarkMode ? '#ffffff' : '#202124';
   const backgroundColor = isDarkMode ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.9)';
@@ -399,7 +406,7 @@ export default function ProjectsTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {projects.map((project) => (
+          {props.projects.map((project) => (
             <ProjectRow key={project.name} project={project} />
           ))}
         </TableBody>
