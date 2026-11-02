@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
+import ArticleIcon from '@mui/icons-material/Article';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useTheme } from './MuiThemeProvider';
@@ -23,9 +24,10 @@ function createProject(
   demo: string,
   github: string,
   detailedDescription: string,
-  features: string[]
+  features: string[],
+  caseStudy?: string
 ) {
-  return { name, description, tech, demo, github, detailedDescription, features };
+  return { name, description, tech, demo, github, detailedDescription, features, caseStudy };
 }
 
 function ProjectRow(props: { project: Project }) {
@@ -76,6 +78,24 @@ function ProjectRow(props: { project: Project }) {
           padding: { xs: '8px 4px', sm: '16px' }
         }}>
           <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+            {project.caseStudy && (
+              <Button
+                size="small"
+                startIcon={<ArticleIcon />}
+                href={project.caseStudy}
+                sx={{
+                  color: textColor,
+                  borderColor: '#289726',
+                  '&:hover': {
+                    borderColor: '#289726',
+                    backgroundColor: isDarkMode ? 'rgba(40, 151, 38, 0.1)' : 'rgba(40, 151, 38, 0.05)'
+                  }
+                }}
+                variant="outlined"
+              >
+                Case study
+              </Button>
+            )}
             {project.github && (
               <Button
                 size="small"
@@ -175,7 +195,8 @@ export const featuredProjects: Project[] = [
       'Filters by date, request type, status, neighborhood and council district',
       'Per-capita neighborhood comparisons and period-over-period change',
       'Trend charts and response times for the request types the City tracks'
-    ]
+    ],
+    '/Projects/SeattleNeighborhoodPulse'
   ),
   createProject(
     'Daily Job Watcher',
@@ -189,7 +210,8 @@ export const featuredProjects: Project[] = [
       'Rules for titles, locations, pay and experience kept in YAML, so tuning needs no code changes',
       'Health alerts when a source breaks, sent once per breakage instead of on every run',
       '294 tests run against recorded API responses, with no live network calls'
-    ]
+    ],
+    '/Projects/DailyJobWatcher'
   ),
   createProject(
     'MIS Website',
