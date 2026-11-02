@@ -229,9 +229,9 @@ export default function Contact() {
               margin: '0 auto'
             }}
           >
-            I&apos;m passionate about solving complex problems through technology and innovation. 
-            Whether you&apos;re looking for a software engineer, data scientist, or DevOps specialist, 
-            I&apos;m excited to discuss how we can work together to bring your ideas to life.
+            I&apos;m looking for software engineering, platform and forward deployed engineering roles,
+            in Seattle or remote. If you&apos;re hiring for one, or working on a problem where that mix of
+            software, cloud infrastructure and AI would help, I&apos;d like to hear about it.
           </Typography>
           
           <Box sx={{ 

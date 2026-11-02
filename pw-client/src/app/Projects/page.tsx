@@ -4,7 +4,7 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import ProjectsTable from '../../components/ProjectsTable';
+import ProjectsTable, { featuredProjects, earlierProjects } from '../../components/ProjectsTable';
 import NavBar from '../../components/NavBar';
 import { useTheme } from '../../components/MuiThemeProvider';
 
@@ -49,13 +49,10 @@ export default function ProjectPage() {
               lineHeight: 1.6
             }}
           >
-            I am a computer scientist with a strong background in software engineering, mathematics, and data science, 
-            specializing in DevOps, bioinformatics, AI, and web development. My experience includes building full 
-            stack applications with Python, React, TypeScript, MUI, .NET, among other technologies as well as working on DevOps and Cloud (AWS and Azure) 
-            infrastructure optimization at ResMed. I have developed diverse applications ranging from CRUD apps, Microcontroller projects, 
-            sequence alignment algorithms, to Neural Network video classification models. I am 
-            particularly passionate about Bioinformatics and AI, where I apply machine learning skills, data analysis, 
-            and high-performance computing to solve real-world biological problems.
+            I build software for a specific problem and a specific user, then keep it running. The featured
+            projects are the ones I&apos;d point to for software engineering, platform and forward deployed
+            work: a live civic data dashboard, an automated job-search pipeline I run every day, and full stack
+            and data projects. Coursework and earlier projects follow.
           </Typography>
         </Box>
 
@@ -77,7 +74,28 @@ export default function ProjectPage() {
             Featured Projects
           </Typography>
           
-          <ProjectsTable />
+          <ProjectsTable projects={featuredProjects} />
+        </Box>
+
+        {/* Coursework and earlier projects */}
+        <Box sx={{ 
+          marginTop: { xs: 4, sm: 6 },
+          padding: { xs: 1, sm: 2 }
+        }}>
+          <Typography 
+            variant="h4" 
+            sx={{ 
+              color: textColor,
+              fontSize: { xs: '1.5rem', sm: '2rem' },
+              fontWeight: 'bold',
+              marginBottom: 3,
+              textAlign: 'center'
+            }}
+          >
+            Coursework and Earlier Projects
+          </Typography>
+          
+          <ProjectsTable projects={earlierProjects} />
         </Box>
 
         {/* Footer Note */}
@@ -94,7 +112,7 @@ export default function ProjectPage() {
               fontStyle: 'italic'
             }}
           >
-            Click on any project row to view detailed information and key features.
+            Expand any project row to see details and key features.
           </Typography>
         </Box>
       </Container>
