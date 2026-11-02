@@ -228,28 +228,3 @@ a:visited {
   }
 }
   
-.intro-tagline {
-  max-width: 38rem;
-  margin: 0 auto;
-}
-
-.intro-tagline p {
-  margin: 0;
-}
-
-.intro-role {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.intro-proof {
-  font-size: 1.05rem;
-  line-height: 1.5;
-  margin-top: 6px !important;
-}
-
-@media (max-width: 768px) {
-  .intro-role {
-    font-size: 1.25rem;
-  }
-}
