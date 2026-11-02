@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import CodeIcon from '@mui/icons-material/Code';
-import CollapsibleTable from '../components/CollapsibleTable';
+import Experience from '../components/Experience';
 import NavBar from "../components/NavBar";
 import { useTheme } from '../components/MuiThemeProvider';
 import './homepageStyles.css'
@@ -66,7 +66,7 @@ export default function Home() {
       </div>
       <div className='experience'>
           <h1 style={{ color: textColor }}>Experience</h1>
-          <CollapsibleTable></CollapsibleTable>
+          <Experience />
       </div>
     </>
   );
