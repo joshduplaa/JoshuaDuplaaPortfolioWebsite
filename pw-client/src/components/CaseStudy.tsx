@@ -12,6 +12,15 @@ import LaunchIcon from '@mui/icons-material/Launch';
 import NavBar from './NavBar';
 import { useTheme } from './MuiThemeProvider';
 
+export type Screenshot = {
+  src: string;       // under /public
+  alt: string;
+  caption: string;
+  width: number;     // intrinsic size, so the layout doesn't shift while images load
+  height: number;
+  narrow?: boolean;  // phone screenshots are shown smaller
+};
+
 export type CaseStudyContent = {
   title: string;
   summary: string;
@@ -26,6 +35,8 @@ export type CaseStudyContent = {
   decisions: string[];
   results: string[];
   next: string[];
+  screenshots?: Screenshot[];
+  credits?: string[];  // team projects: who did what
 };
 
 function Section(props: { title: string; items?: string[]; children?: React.ReactNode }) {
@@ -106,6 +117,54 @@ function Diagram(props: { stages: string[] }) {
   );
 }
 
+function Screenshots(props: { shots: Screenshot[] }) {
+  const { isDarkMode } = useTheme();
+  const secondaryTextColor = isDarkMode ? '#e0e0e0' : '#5f6368';
+  const borderColor = isDarkMode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.12)';
+
+  return (
+    <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 2 }}>
+      {props.shots.map((shot, index) => (
+        <Box
+          component="figure"
+          key={shot.src}
+          sx={{ margin: 0, gridColumn: { md: index === 0 ? '1 / -1' : 'auto' }, textAlign: 'center' }}
+        >
+          <Box
+            component="a"
+            href={shot.src}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open full-size screenshot: ${shot.caption}`}
+            sx={{ display: 'block' }}
+          >
+          <Box
+            component="img"
+            src={shot.src}
+            alt={shot.alt}
+            width={shot.width}
+            height={shot.height}
+            loading={index === 0 ? 'eager' : 'lazy'}
+            sx={{
+              width: '100%',
+              maxWidth: shot.narrow ? 260 : '100%',
+              height: 'auto',
+              borderRadius: 1,
+              border: `1px solid ${borderColor}`,
+              display: 'block',
+              marginX: 'auto'
+            }}
+          />
+          </Box>
+          <Typography component="figcaption" sx={{ color: secondaryTextColor, fontSize: '0.85rem', marginTop: 1, lineHeight: 1.5 }}>
+            {shot.caption}
+          </Typography>
+        </Box>
+      ))}
+    </Box>
+  );
+}
+
 export default function CaseStudy(props: { content: CaseStudyContent }) {
   const c = props.content;
   const { isDarkMode } = useTheme();
@@ -168,9 +227,15 @@ export default function CaseStudy(props: { content: CaseStudyContent }) {
           </Typography>
           <Diagram stages={c.diagram} />
         </Section>
+        {c.screenshots && c.screenshots.length > 0 && (
+          <Section title="Screenshots">
+            <Screenshots shots={c.screenshots} />
+          </Section>
+        )}
         <Section title="Decisions and trade-offs" items={c.decisions} />
         <Section title="Results" items={c.results} />
         <Section title="What I'd do next" items={c.next} />
+        {c.credits && c.credits.length > 0 && <Section title="Team and credit" items={c.credits} />}
       </Container>
     </>
   );
