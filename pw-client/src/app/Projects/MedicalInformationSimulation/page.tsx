@@ -15,7 +15,7 @@ const content: CaseStudyContent = {
     'It began as a team capstone for Texas Tech University Health Sciences Center. I later finished the core workflow ' +
     'end to end. It is an educational simulation, not for clinical use, and all data is synthetic.',
   stack: 'React 18, TypeScript, MUI, Recharts, Vite, ASP.NET Core 8, EF Core, ASP.NET Identity + JWT, SQL Server, Docker, Playwright, GitHub Actions, Firebase Hosting',
-  github: 'https://github.com/joshduplaa/medical_information_simulation/tree/finish-mis',
+  github: 'https://github.com/joshduplaa/medical_information_simulation',
   demo: 'https://scrumdumpstersmis.web.app',
   problem: [
     'Clinical lab science students learn quality control by running control samples, judging whether each run is in ' +

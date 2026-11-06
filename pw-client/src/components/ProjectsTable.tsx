@@ -218,7 +218,7 @@ export const featuredProjects: Project[] = [
     'Team capstone web app for teaching laboratory quality control at TTU Health Sciences Center: faculty set QC targets, students enter results and read Levey-Jennings charts with Westgard checks, and faculty grade each run',
     'React, TypeScript, ASP.NET Core 8, EF Core, SQL Server, Playwright',
     'https://scrumdumpstersmis.web.app/',
-    'https://github.com/joshduplaa/medical_information_simulation/tree/finish-mis',
+    'https://github.com/joshduplaa/medical_information_simulation',
     'Started as a team capstone in 2024; I rebuilt the client and later finished the core workflow end to end with Claude Code. Server-side auth with roles, a submit / grade / return workflow, Levey-Jennings charts with Westgard rules, and tests at three levels in CI. The live demo runs entirely in the browser on synthetic data. Educational simulation only, not for clinical use.',
     [
       'Full QC loop: lots and targets, results entry, submission, grading and a gradebook',
