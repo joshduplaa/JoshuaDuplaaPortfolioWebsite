@@ -188,7 +188,7 @@ export const featuredProjects: Project[] = [
     'A harness that runs model-generated code against test suites inside a locked-down Docker sandbox and records reproducible, categorized results',
     'Python, Docker, gVisor, pytest, uv',
     '',
-    'https://github.com/joshduplaa/LLM-coding-eval-harness/tree/feature/m1-core-harness',
+    'https://github.com/joshduplaa/LLM-coding-eval-harness',
     'Each sample runs in a fresh container with no network, a read-only filesystem, a non-root user, no capabilities, and limits on CPU, memory and processes. gVisor is available as an optional stronger sandbox. A trusted wrapper runs the tests and returns one result that carries a per-run code, so the code under test can\'t fake a pass. Every run is saved with what\'s needed to reproduce it. Milestone 1 of 6 is done. Only a mock model exists so far, so no real model has been measured. Later milestones add a results service, CI, Kubernetes with Grafana monitoring, and Terraform. Built as an exercise in agentic development with Claude Code.',
     [
       'Eight result categories (pass, wrong answer, runtime error, syntax error, timeout, resource limit, sandbox violation, harness error), and harness errors never count against the model',
