@@ -214,18 +214,19 @@ export const featuredProjects: Project[] = [
     '/Projects/DailyJobWatcher'
   ),
   createProject(
-    'MIS Website',
-    'Full stack Application built with React/TypeScript frontend and .NET/C# backend for the Molecular Information Simulations laboratory at TTU HSC',
-    'React, TypeScript, .NET, C#, Full Stack',
+    'Medical Information Simulation (MIS)',
+    'Team capstone web app for teaching laboratory quality control at TTU Health Sciences Center: faculty set QC targets, students enter results and read Levey-Jennings charts with Westgard checks, and faculty grade each run',
+    'React, TypeScript, ASP.NET Core 8, EF Core, SQL Server, Playwright',
     'https://scrumdumpstersmis.web.app/',
-    'https://github.com/joshduplaa/medical_information_simulation',
-    'A comprehensive full-stack web application developed for the Molecular Information Simulations laboratory at Texas Tech University Health Sciences Center. Built collaboratively with a team using modern web technologies.',
+    'https://github.com/joshduplaa/medical_information_simulation/tree/finish-mis',
+    'Started as a team capstone in 2024; I rebuilt the client and later finished the core workflow end to end with Claude Code. Server-side auth with roles, a submit / grade / return workflow, Levey-Jennings charts with Westgard rules, and tests at three levels in CI. The live demo runs entirely in the browser on synthetic data. Educational simulation only, not for clinical use.',
     [
-      'React/TypeScript frontend',
-      '.NET/C# backend',
-      'Team collaboration',
-      'Laboratory management system'
-    ]
+      'Full QC loop: lots and targets, results entry, submission, grading and a gradebook',
+      'Levey-Jennings charts with 1-2s, 1-3s, 2-2s, R-4s, 4-1s and 10x Westgard rules',
+      'Deny-by-default role-based auth with JWT, lockout and rate limiting',
+      '83 automated tests (API, client, Playwright incl. an accessibility scan) in GitHub Actions'
+    ],
+    '/Projects/MedicalInformationSimulation'
   ),
   createProject(
     'Pairwise Sequence Alignment Tool',
